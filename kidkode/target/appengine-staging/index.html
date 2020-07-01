@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: black;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body onload="addRandomQuote()">
+<div class="header">
+  <h1 id = "title"></h1>
+  <p>Welcome to my personal portfolio! I hope you enjoy!</p>
+</div>
+
+<div class="navbar">
+<div id = "socials">
+  <a href="https://www.linkedin.com/in/aionashby/" target = "_blank">LinkedIn</a>
+  <a href="https://github.com/aionashby/" target = "_blank">GitHub</a>
+  <a href="" 
+        target = "_blank">Resume</a>
+</div>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <h5>Photo of me:</h5>
+    <img src="/images/IMG_4639.jpeg" width = "350" height = "200">
+    <p>
+        <ul>
+            <li>Education: Cornell University</li>
+            <li>Major: Computer Science w/ Minor in Business</li>
+            <li>Year: 2022</li>
+            <li>Home State: New Jersey</li>
+        </ul>
+    </p>
+    <h3>Fun Facts!</h3>
+    <p>
+        <ul>
+            <li>I am Grenadian!</li>
+            <li>I played the violin for 10 years.</li>
+            <li>My favorite color is blue.</li>
+            <li>I have two older sisters and a younger brother.</li>
+            <li>My favorite animal is a dolphin.</li>
+            <li>I love watching Netflix and YouTube!</li>
+        </ul>
+    </p>
+    <h3>Hidden Facts!</h3>
+    <p>
+        Click the button below to learn a hidden fact about me!
+    </p>
+    <button onclick="addRandomFact()">Learn</button>
+    <div id="fact-container"></div>
+  </div>
+  <div class="main">
+    <h2>Projects</h2>
+    <h5>Some projects I have worked on include:</h5>
+    <p>
+        <ul>
+            <li>Space Invaders - My own interpretation of the game Space Invaders!</li>
+            <li>Duck Runner - A game that involves guiding a duck through obstacles</li>
+            <li>Plumber Escape - An application that focused on strengthening my skills in algorithms like
+                Dijkstra, DFS, and BFS.</li>
+            <li>RISC-V Processor - Created my own RISCV Pipeline processor using Logism.</li>
+        </ul>
+    </p>
+    <h2>Experience and Awards</h2>
+    <p>
+        <ul>
+            <li>Twitter #DevelopHer Program - 1 of 40 attendees selected to attend 2-day interactive program 
+                for second-year CS majors focused on professional and technical development. Used Java8 to successfully
+                complete coding challenge created by Twitter Engineers.</li>
+            <li>Honeywell IPP Scholar - Selected as 1 of 18 scholars into a program geared towards advancing 
+                underrepresented minorities in engineering disciplines through professional development.</li>
+        </ul>
+    <h2>Picture Gallery!</h2>
+    <h5>Just some pictures of me outside of my academics! I enjoy hanging out with my friends, family, and traveling!</h5>
+    <div class="pictures">
+        <div class="picture">
+            <img src = "/images/friends.JPG" alt = "Suitemates" style = "width:100%">
+            </div>
+        <div class="picture">
+            <img src = "/images/parents.JPG" alt = "Parents" style = "width:100%">
+            </div>
+        <div class="picture">
+            <img src="/images/AutumnE.jpg" alt="Friends2" style="width:100%">
+            </div>
+    </div>
+    <form action="data" method="POST">
+
+    <h2>Comments:</h2>
+    <input type="text" name="comments">
+    <br/><br/>
+
+    <input type="submit" />
+</form>
+<p id="comment-list"></p>
+
+    <!-- <form action="/subtraction-game" method="POST">
+
+      <p>Enter number of comments:</p>
+      <input type="number" name="player-choice" min="1" max="3" value="1">
+      <br/><br/>
+
+      <input type="submit" />
+    </form> -->
+  </body>
+  </div>
+</div>
+
+<div class="footer">
+  <h2 id = "quote-container"></h2>
+</div>
+
+</body>
+</html>
