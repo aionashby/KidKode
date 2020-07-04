@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>KidKode</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </head>
     <body>
-        <h1>HI guys! Hope this works!</h1>
-
+        <h1> KidKode <h1> 
+        <h2> Find your passion in computer science!<h2> 
+        <form class="dropdown" name="branchCode" method="post" action="/result">
+        <label for="branchCode">Which activity do you like doing the most?</label>
+        <select id="branchCode" name="branchCode">
+            <option value="ux">Arts and crafts</option>
+            <option value="swe">Problem solving or puzzles</option>
+            <option value="vid">Playing video games</option>
+            <option value="vr">Watching 3-D movies</option>
+        </select>
+        <input type="submit" value="Submit">
+        </form>
     </body>
 </html>
