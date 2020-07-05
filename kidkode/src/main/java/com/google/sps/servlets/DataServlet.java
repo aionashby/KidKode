@@ -40,6 +40,19 @@ public class DataServlet extends HttpServlet {
                 links.add("https://www.minecraft.net/en-us/");
                 links.add("https://gamestarmechanic.com/");
             }
+
+            else if (code.equals("vr")) {
+                this.title = new String("Virtual Reality");
+                this.description = new String ("Virtual Reality is a simulated experience that can be similar to or completely different from the real world. Applications of Virtual Reality can include entertainment and educational purposes. Virtual Reality allows you to bring your imagination to life! Anything you can imagine, you can create using VR! The world is your oyster using Virtual Reality and it allows your users to get an immersive and interactive experience into your wildest dreams! If you love creating your own worlds, immersive experiences, and fun adventures Virtual Reality may be for you!");
+                this.mainImagePath = new String ("https://techerati.com/wp-content/uploads/2019/12/5g-gaming.jpg");
+                this.links = new ArrayList <String>();
+                links.add("https://pbskids.org/kartkingdom/");
+                links.add("http://www.carnegiecyberacademy.com/");
+                links.add("http://www.ourworld.com/ow/enablePlugin.jsp");
+                links.add("https://www.animaljam.com/en");
+
+
+            }
             //add rest of career paths info here in same format as above 
         }
     }
