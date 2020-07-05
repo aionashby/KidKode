@@ -30,6 +30,16 @@ public class DataServlet extends HttpServlet {
                 links.add("https://www.commonsensemedia.org/app-reviews/creativas-fashion-design-studio");
                 links.add("https://appinventor.mit.edu/"); 
             }
+            else if (code.equals("vid")) {
+                this.title = new String("Game Development");
+                this.description = new String("Game Development is the process of making a video game. There are lots of roles and parts to game developement. You first begin with an idea, concept or story for a game. After planning out how you want to build your game, you will code the logic of the game, create art to make it look nice, add sounds and music to it, and test it until you have a fully completed game!");
+                this.mainImagePath = new String("https://spzone-simpleprogrammer.netdna-ssl.com/wp-content/uploads/2018/01/Videogame.png");
+                this.links = new ArrayList <String>();
+                links.add("https://codecombat.com/");
+                links.add("https://www.tynker.com/");
+                links.add("https://www.minecraft.net/en-us/");
+                links.add("https://gamestarmechanic.com/");
+            }
             //add rest of career paths info here in same format as above 
         }
     }
