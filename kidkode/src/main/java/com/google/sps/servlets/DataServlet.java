@@ -75,7 +75,7 @@ public class DataServlet extends HttpServlet {
         out.println("h3 {text-align: center;" + newline + "color:#000000;" + newline + "font-size: medium}");
         out.println("a {text-align: center;" + newline + "color: #00C5A4;}");
         out.println(".centerLinks {display: flex;"+ newline + "width: 50%;" + newline + "margin: 0 auto;" + newline + "justify-content: flex-start;" + newline + "flex-wrap: wrap;}");
-        out.println("img {max-height: 30%;" + newline + "height: auto;}");
+        out.println("img {max-width: 40%;" + newline + "height: auto;}");
         out.println("</style>");
         out.println("</head>");
         out.println("</body>");
