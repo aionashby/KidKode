@@ -50,7 +50,55 @@ public class DataServlet extends HttpServlet {
                 links.add("http://www.carnegiecyberacademy.com/");
                 links.add("http://www.ourworld.com/ow/enablePlugin.jsp");
                 links.add("https://www.animaljam.com/en");
+            }
 
+            else if (code.equals("swe")) {
+                this.title = new String("Software Engineering");
+                this.description = new String ("Software engineers are computer science professionals who use knowledge of engineering principles and programming languages to build software products, develop computer games, and run network control systems. If you like using your critical thinking skills to solve problems and enjoy thinking about abstract, out of this world concepts, Software Engineering may be the choice for you!");
+                this.mainImagePath = new String ("https://inteng-storage.s3.amazonaws.com/img/iea/nR6bkXZxwo/sizes/software-engineering-skills_md.jpg");
+                this.links = new ArrayList <String>();
+                links.add("https://studio.code.org/s/starwarsblocks/stage/1/puzzle/1");
+                links.add("https://www.codewars.com/");
+                links.add("https://checkio.org/");
+            }
+
+            else if (code.equals("hwe")) {
+                this.title = new String ("Hardware Engineering");
+                this.description = new String("Hardware Engineering is the process of designing, developing, testing and producing computer systems and various physical components related to computer systems. Imagine knowing how a computer works exactly. Imagine knowing how to make your own processors. Imagine being able to understand how a computer understands and interprets code. If this sounds interesting to you then Hardware Engineering may be for you!");
+                this.mainImagePath = new String ("https://www.indiaeducation.net/imagesvr_ce/2591/Computer%20Hardware%20Engineering.jpg");
+                this.links = new ArrayList <String>();
+                links.add("http://hwe-game.com/login.php");
+                links.add("https://claudiu-kiss.itch.io/pc-building-simulator");
+            }
+
+            else if (code.equals("webdev")) {
+                this.title = new String ("Web Development");
+                this.description = new String ("Web development is the work involved in developing a website for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web-based internet applications, electronic businesses, and social network services. Imagine being able to create your own website from the ground up. Imagine being able to create a page dedicated to everything you love. If this intrigues you then Web Development may be the way to go!");
+                this.mainImagePath = new String ("https://www.bitdegree.org/tutorials/wp-content/uploads/2018/08/what-is-a-web-developer.jpg");
+                this.links = new ArrayList <String>();
+                links.add("http://www.hexinvaders.com/");
+                links.add("http://flexboxfroggy.com/");
+                links.add("https://www.pixact.ly/");
+            }
+
+            else if (code.equals("ai")) {
+                this.title = new String ("Artificial Intelligence");
+                this.description = new String ("Artificial intelligence is a wide-ranging branch of computer science concerned with building smart machines capable of performing tasks that typically require human intelligence. AI is an interdisciplinary science with multiple approaches, but advancements in machine learning and deep learning are creating a paradigm shift in virtually every sector of the tech industry. If you are interested in creating something that thinks like a human, then stop right here because Artificial Intelligence is for you!");
+                this.mainImagePath = new String("https://miro.medium.com/max/1440/0*xy4Ub1OpJXWABuE6");
+                this.links = new ArrayList <String>();
+                links.add("http://csunplugged.mines.edu/activity-AI.html");
+                links.add("https://quickdraw.withgoogle.com/");
+                links.add("https://plaw.itch.io/computer-open-that-door");
+            }
+
+            else if (code.equals("cyber")) {
+                this.title = new String ("Cyber Security");
+                this.description = new String ("Computer security, cybersecurity or information technology security is the protection of computer systems and networks from the theft of or damage to their hardware, software, or electronic data, as well as from the disruption or misdirection of the services they provide. If you want to protect the web world from hackers and other predators then Cyber Security would be a good fit for you!");
+                this.mainImagePath = new String ("https://i2.wp.com/blog.logsign.com/wp-content/uploads/2019/12/IT-security-vs-Cyber-Security.png?fit=772%2C386&ssl=1");
+                this.links = new ArrayList <String>();
+                links.add("https://www.consumer.ftc.gov/sites/default/files/games/off-site/ogol/_cyber-criminal.html");
+                links.add("https://www.nsteens.org/");
+                links.add("https://mediasmarts.ca/game/privacy-playground-first-adventure-three-cyberpigs");
 
             }
             //add rest of career paths info here in same format as above 
