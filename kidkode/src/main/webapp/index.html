@@ -7,20 +7,21 @@
         <link rel="stylesheet" href="https://use.typekit.net/xfb2kyg.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="script.js"></script>
+        <header>
+            <ul class="navbar">
+                <li><a class="active" href="/">Start Quiz</a></li>
+                <li><a href="#explore">Explore</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </header>
     </head>
     <body>
-        <ul class="navbar">
-            <li><a class="active" href="#home">Take Quiz</a></li>
-            <li><a href="#explore">Explore</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
         <h1> KIDKODE </h1> 
         <h2> Find your passion in computer science! </h2> 
         <h3> Tell us what your hobbies and favorite activities are, and we'll show you fields of computer science that you might like! </h3>
         <form class="dropdown" name="branchCode" method="post" action="/result">
         <label for="branchCode">Which activity do you like doing the most?</label>
-        <br>
         <select id="branchCode" name="branchCode">
             <option value="ux">Arts and crafts</option>
             <option value="swe">Problem solving or puzzles</option>
@@ -31,7 +32,6 @@
             <option value="ai">Playing with robots</option>
             <option value="cyber">Building forts and protecting people</option>
         </select>
-        <br>
         <input type="submit" value="Submit">
         </form>
     </body>
