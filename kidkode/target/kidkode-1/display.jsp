@@ -10,7 +10,9 @@
 <title>Hello World JSP!</title>
 </head>
 <body>
+    <!-- diplaying the text from the ux txt file the server sent-->
     <c:out value="${text.fileOutput}" />
+    <!-- example of some things we can do with JSP with variables/functions/conditionals!-->
     <c:set var="str" value="Our team is so cool"/> 
     <br>
     <br>
