@@ -1,33 +1,52 @@
+
 [
-    {
-  		"number": 0,
+
+    "step0":{
+>>>>>>> resultPage
   		"question": "Do you like to play videogames?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
   				"points": ["Game Development", "Video Game Technical Art", "Technical Art","Game Developer"],
+<<<<<<< HEAD
   				"next": 1
+=======
+  				"next": "step1"
+>>>>>>> resultPage
   			},
   			"no": {
   				"choice": "no",
   				"points": ["Computer Graphics Researcher", "Graphics Software Engineer", "Interaction Design", "Web Design", "Interactive Design", "User Experience Design/User Interface Design (UX/UI)", "Data Visualization Engineer", "Flash Design", "Virtual Reality"],
+<<<<<<< HEAD
   				"next": 2
+=======
+  				"next": "step2"
+>>>>>>> resultPage
   			}
   		},
   		"previous": null
   	},
+<<<<<<< HEAD
   	{
   		"number": 1,
+=======
+  	"step1": {
+>>>>>>> resultPage
   		"question": "Do you like making art on the computer?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
   				"points": ["Game Development", "Video Game Technical Art", "Game Design"],
+<<<<<<< HEAD
   				"next": 3
+=======
+  				"next": "step3"
+>>>>>>> resultPage
   			},
   			"no": {
   				"choice": "no",
   				"points": ["Game Development", "Graphics Software Engineer", "Flash Design", "Web Design", "User Experience Design/User Interface Design (UX/UI)"],
+<<<<<<< HEAD
   				"next": 4
   			}
   		},
@@ -35,16 +54,29 @@
   	},
   	{
   		"number": 2,
+=======
+  				"next": "step4"
+  			}
+  		},
+  		"previous": "step0"
+  	},
+  	"step2": {
+>>>>>>> resultPage
   		"question": "Do you like to try out new websites or apps?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
   				"points": ["Interaction Design", "Web Design", "Interactive Design", "Flash Design", "User Experience Design/User Interface Design (UX/UI)", "Data Visualization Engineer"],
+<<<<<<< HEAD
   				"next": 5
+=======
+  				"next": "step5"
+>>>>>>> resultPage
   			},
   			"no": {
   				"choice": "no",
   				"points": ["Computer Graphics Researcher", "Computer Graphics Software Engineer", "Interaction Design", "Interactive Design", "Flash Design", "Data Visualization Engineer", "Flash Design", "Virtual Reality"],
+<<<<<<< HEAD
   				"next": 6
   			}
   		},
@@ -52,16 +84,29 @@
   	},
   	{
   		"number": 3,
+=======
+  				"next": "step6"
+  			}
+  		},
+  		"previous": "step0"
+  	},
+  	"step3": {
+>>>>>>> resultPage
   		"question": "Do you like designing game characters?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
   				"points": ["Game Development", "Video Game Technical Art", "Game Design"],
+<<<<<<< HEAD
   				"next": 7
+=======
+  				"next": "step7"
+>>>>>>> resultPage
   			},
   			"no": {
   				"choice": "no",
   				"points": ["Game Development", "Video Game Technical Art", "Game Design", "Computer Graphics Researcher"],
+<<<<<<< HEAD
   				"next": 8
   			}
   		},
@@ -69,16 +114,29 @@
   	},
   	{
   		"number": 4,
+=======
+  				"next": "step8"
+  			}
+  		},
+  		"previous": "step1"
+  	},
+  	"step4": {
+>>>>>>> resultPage
   		"question": "Do you like making or telling stories?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
   				"points": ["Video Game Technical Art", "Game Design", "User Experience Design/User Interface Design (UX/UI)"],
+<<<<<<< HEAD
   				"next": 9
+=======
+  				"next": "step9"
+>>>>>>> resultPage
   			},
   			"no": {
   				"choice": "no",
   				"points": ["User Experience Design/User Interface Design (UX/UI)", "Game Development", "Flash Design"],
+<<<<<<< HEAD
   				"next": 10
   			}
   		},
@@ -86,16 +144,29 @@
   	},
   	{
   		"number": 5,
+=======
+  				"next": "step10"
+  			}
+  		},
+  		"previous": "step1"
+  	},
+  	"step5": {
+>>>>>>> resultPage
   		"question": "Do you like matching colors together?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
   				"points": ["Web Design", "User Experience Design/User Interface Design (UX/UI)", "Data Visualization Engineer", "Flash Design"],
+<<<<<<< HEAD
   				"next": 11
+=======
+  				"next": "step11"
+>>>>>>> resultPage
   			},
   			"no": {
   				"choice": "no",
   				"points": ["Interaction Design", "Interactive Design", "User Experience Design/User Interface Design (UX/UI)"],
+<<<<<<< HEAD
   				"next": 12
   			}
   		},
@@ -103,16 +174,29 @@
   	},
   	{
   		"number": 6,
+=======
+  				"next": "step12"
+  			}
+  		},
+  		"previous": "step2"
+  	},
+  	"step6": {
+>>>>>>> resultPage
   		"question": "Do you like making art on the computer?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
   				"points": ["Game Development", "Video Game Technical Art", "Game Design", "Graphics Software Engineer", "Interaction Design", "Interactive Design", "Flash Design", "User Experience Design/User Interface Design (UX/UI)"],
+<<<<<<< HEAD
   				"next": 12
+=======
+  				"next": "step12"
+>>>>>>> resultPage
   			},
   			"no": {
   				"choice": "no",
   				"points": ["Game Development", "Graphics Software Engineer", "Flash Design", "User Experience Design/User Interface Design (UX/UI)"],
+<<<<<<< HEAD
   				"next": 12
   			}
   		},
@@ -120,16 +204,29 @@
   	},
   	{
   		"number": 7,
+=======
+  				"next": "step12"
+  			}
+  		},
+  		"step": "step2"
+  	},
+  	"step7": {
+>>>>>>> resultPage
   		"question": "Do you like animating your drawings (making them look like they're moving)?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
   				"points": ["Game Development", "Video Game Technical Art", "Game Design", "Virtual Reality"],
+<<<<<<< HEAD
   				"next": 7
+=======
+  				"next": "step7"
+>>>>>>> resultPage
   			},
   			"no": {
   				"choice": "no",
   				"points": ["Game Development", "Video Game Technical Art"],
+<<<<<<< HEAD
   				"next": 8
   			}
   		},
@@ -138,6 +235,15 @@
   	},
   	{
   		"number": 8,
+=======
+  				"next": "step8"
+  			}
+  		},
+  		"previous": "step3"
+
+  	},
+  	"step8": {
+>>>>>>> resultPage
   		"question": "Do you like animating your drawings (making them look like they're moving)?",
   		"answers": {
   			"yes": {
@@ -148,6 +254,7 @@
   			"no": {
   				"choice": "no",
   				"points": ["Computer Graphics Researcher", "Computer Graphics Software Engineer"],
+<<<<<<< HEAD
   				"next": 18
   			}
   		},
@@ -155,6 +262,14 @@
   	},
   	{
   		"number": 9,
+=======
+  				"next": "step18"
+  			}
+  		},
+  		"previous": "step3"
+  	},
+  	"step9": {
+>>>>>>> resultPage
   		"question": "Do you like animating your drawings (making them look like they're moving)?",
   		"answers": {
   			"yes": {
@@ -165,6 +280,7 @@
   			"no": {
   				"choice": "no",
   				"points": ["Computer Graphics Researcher", "Computer Graphics Software Engineer"],
+<<<<<<< HEAD
   				"next": 18
   			}
   		},
@@ -172,6 +288,14 @@
   	},
   	{
   		"number": 10,
+=======
+  				"next": "step18"
+  			}
+  		},
+  		"previous": "step3"
+  	},
+  	"step10": {
+>>>>>>> resultPage
   		"question": "Do you like problem solving?",
   		"answers": {
   			"yes": {
@@ -185,16 +309,26 @@
   				"next": null
   			}
   		},
+<<<<<<< HEAD
   		"previous": 4
   	},
   	{
   		"number": 11,
+=======
+  		"previous": "step4"
+  	},
+  	"step11": {
+>>>>>>> resultPage
   		"question": "When working on projects in school, do you keep chaniging things around until they look nice enough for you?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
   				"points": ["Web Design", "User Experience Design/User Interface Design (UX/UI)"],
+<<<<<<< HEAD
   				"next": 23
+=======
+  				"next": "step23"
+>>>>>>> resultPage
   			},
   			"no": {
   				"choice": "no",
@@ -202,10 +336,16 @@
   				"next": null
   			}
   		},
+<<<<<<< HEAD
   		"previous": 5
   	},
   	{
   		"number": 12,
+=======
+  		"previous": "step5"
+  	},
+  	"step12": {
+>>>>>>> resultPage
   		"question": "Do you like to make things easy for other people to use?",
   		"answers": {
   			"yes": {
@@ -218,6 +358,7 @@
   			"no": {
   				"choice": "no",
   				"points": ["Flash Design"],
+<<<<<<< HEAD
   				"next": 26
   			}
   		},
@@ -225,6 +366,14 @@
   	},
   	{
   		"number": 15,
+=======
+  				"next": "step26"
+  			}
+  		},
+  		"previous": "step5"
+  	},
+  	"step15":{
+>>>>>>> resultPage
   		"question": "Do you like problem solving?",
   		"answers": {
   			"yes": {
@@ -235,6 +384,7 @@
   			"no": {
   				"choice": "no",
   				"points": [],
+<<<<<<< HEAD
   				"next": 32
   			}
   		},
@@ -242,12 +392,24 @@
   	},
   	{
   		"number": 18,
+=======
+  				"next": "step32"
+  			}
+  		},
+  		"previous": "step7"
+  	},
+  	"step18": {
+>>>>>>> resultPage
   		"question": "Do you like designing scenery or backgrounds for your art?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
   				"points": ["Game Design", "Video Game Technical Art"],
+<<<<<<< HEAD
   				"next": 37
+=======
+  				"next": "step37"
+>>>>>>> resultPage
   			},
   			"no": {
   				"choice": "no",
@@ -255,10 +417,16 @@
   				"next": null
   			}
   		},
+<<<<<<< HEAD
   		"previous": 8
   	},
     {
         "number": 20,
+=======
+  		"previous": "step8"
+  	},
+    "step20": {
+>>>>>>> resultPage
         "question": "Do you like designing scenery or backgrounds for your art?",
         "answers": {
             "yes": {
@@ -269,6 +437,7 @@
             "no": {
                 "choice": "no",
                 "points": ["Game Development", "Flash Design"],
+<<<<<<< HEAD
                 "next": 42
             }
         },
@@ -276,6 +445,14 @@
   	},
   	{
   		"number": 23,
+=======
+                "next": "step42"
+            }
+        },
+        "previous": "step9"
+  	},
+  	"step23": {
+>>>>>>> resultPage
   		"question": "Do you like problem solving?",
   		"answers": {
   			"yes": {
@@ -286,6 +463,7 @@
   			"no": {
   				"choice": "no",
   				"points": [],
+<<<<<<< HEAD
   				"next": 48
   			}
   		},
@@ -293,6 +471,14 @@
   	},
   	{
   		"number": 26,
+=======
+  				"next": "step48"
+  			}
+  		},
+  		"previous": "step11"
+  	},
+  	"step26": {
+>>>>>>> resultPage
   		"question": "Do you like interacting with others?",
   		"answers": {
   			"yes": {
@@ -303,6 +489,7 @@
   			"no": {
   				"choice": "no",
   				"points": [],
+<<<<<<< HEAD
   				"next": 54
   			}
   		},
@@ -310,6 +497,14 @@
   	},
   	{
   		"number": 28,
+=======
+  				"next": "step54"
+  			}
+  		},
+  		"previous": "step4"
+  	},
+  	"step28": {
+>>>>>>> resultPage
   		"question": "Do you like making videos?",
   		"answers": {
   			"yes": {
@@ -320,6 +515,7 @@
   			"no": {
   				"choice": "no",
   				"points": ["Flash Design", "Virtual Reality"],
+<<<<<<< HEAD
   				"next": 58
   			}
   		},
@@ -327,12 +523,24 @@
   	},
   	{
   		"number": 32,
+=======
+  				"next": "step58"
+  			}
+  		},
+  		"previous": "step13"
+  	},
+  	"step32": {
+>>>>>>> resultPage
   		"question": "Do you like making your drawings look 3D?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
   				"points": ["Video Game Technical Art"],
+<<<<<<< HEAD
   				"next": 65
+=======
+  				"next": "step65"
+>>>>>>> resultPage
   			},
   			"no": {
   				"choice": "no",
@@ -340,10 +548,16 @@
   				"next": null
   			}
   		},
+<<<<<<< HEAD
   		"previous": 15
   	},
   	{
   		"number": 37,
+=======
+  		"previous": "step15"
+  	},
+  	"step 37": {
+>>>>>>> resultPage
   		"question": "Do you like making stories?",
   		"answers": {
   			"yes": {
@@ -357,10 +571,16 @@
   				"next": null
   			}
   		},
+<<<<<<< HEAD
   		"previous": 18
   	},
   	{
   		"number": 42,
+=======
+  		"previous": "step18"
+  	},
+  	"step42": {
+>>>>>>> resultPage
   		"question": "Do you have an active imagination and always come up with new ideas?",
   		"answers": {
   			"yes": {
@@ -374,10 +594,16 @@
   				"next": null
   			}
   		},
+<<<<<<< HEAD
   		"previous": 18
   	},
   	{
   		"number": 48,
+=======
+  		"previous": "step18"
+  	},
+  	"step48": {
+>>>>>>> resultPage
   		"question": "Do you like making cool charts and graphs (like pie charts and bar graphs)?",
   		"answers": {
   			"yes": {
@@ -391,10 +617,16 @@
   				"next": null
   			}
   		},
+<<<<<<< HEAD
   		"previous": 23
   	},
   	{
   		"number": 54,
+=======
+  		"previous": "step23"
+  	},
+  	"step54": {
+>>>>>>> resultPage
   		"question": "Do you like making things look fun and exciting?",
   		"answers": {
   			"yes": {
@@ -408,16 +640,26 @@
   				"next": null
   			}
   		},
+<<<<<<< HEAD
   		"previous": 26
   	},
   	{
   		"number": 57,
+=======
+  		"previous": "step26"
+  	},
+  	"step57": {
+>>>>>>> resultPage
   		"question": "Do you like making your art and/or videos look real?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
   				"points": ["Virtual Reality"],
+<<<<<<< HEAD
   				"next": 115
+=======
+  				"next": "step115"
+>>>>>>> resultPage
   			},
   			"no": {
   				"choice": "no",
@@ -425,10 +667,16 @@
   				"next": null
   			}
   		},
+<<<<<<< HEAD
   		"previous": 28
   	},
   	{
   		"number": 115,
+=======
+  		"previous": "step28"
+  	},
+  	"step115" : {
+>>>>>>> resultPage
   		"question": "Do you like creating scenery or backgrounds for your art or videos?",
   		"answers": {
   			"yes": {
@@ -442,6 +690,12 @@
   				"next": null
   			}
   		},
+<<<<<<< HEAD
   		"previous": 57
   	}
   ]
+=======
+  		"previous": "step57"
+  	}
+}
+>>>>>>> resultPage

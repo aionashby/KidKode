@@ -1,0 +1,49 @@
+body { 
+    font-family: proxima-soft, sans-serif;
+}
+
+.title{ 
+    color: #00C5A4;
+    font-weight: bold;
+    text-align: center;
+}
+
+.heading{ 
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+ }
+
+.description {
+    text-align: center;
+    color: #717171;
+    margin: 2%;
+    font-weight: 500;
+}
+
+p {
+    text-align: center;
+    margin: 2%;
+}
+
+h3 {
+    text-align: center;
+    color:#000000;
+    font-size: medium;
+}
+
+a {
+    text-align: "center";
+    color : "#00C5A4";
+}
+
+img {
+    max-width: 40%;
+    height: auto;
+}
+
+.centerLinks{
+    width:50%;
+    margin: 0 auto;
+}
+   
