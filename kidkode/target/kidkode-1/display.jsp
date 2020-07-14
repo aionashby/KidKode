@@ -13,7 +13,7 @@
 </head>
 <body>
     <!-- diplaying the text from the txt file the server sent-->
-    <h2 class="heading">You might like</h2>
+    <h2 class="heading">You might like:</h2>
     <h1 class="title"><c:out value="${text.title}" /></h1>
     <p><img src=${text.mainImagePath}><img></p>
     <p class="description"><c:out value="${text.description}" /></p>
