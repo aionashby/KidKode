@@ -4,33 +4,51 @@ import java.io.File;
 import java.util.Scanner;
  
 public class ReadFile {
-
-    private String fileOutput;
     private String path;
-
+    private String title;
+    private String description;
+    private String mainImagePath;  
+    private String[] links;    
+    
+    //constructor 
     public ReadFile(String path) {
         this.path = path;
         setFileOutput(path);
     }
 
-    public String getFileOutput() {
-        return fileOutput;
+    //getters for JSP
+    public String getTitle() {
+        return this.title;
+    }
+    
+    public String getDescription() {
+        return this.description;
+    }
+    public String getMainImagePath() {
+        return this.mainImagePath;
     }
 
-    public void setFileOutput(String path) {
+    public String[] getLinks() {
+        return this.links;
+    }
+
+    private void setFileOutput(String path) {
+        links = new String[3];
         Scanner scan = null;
-        String s2 = path;
-        StringBuffer buffer;
+
         try {
-            buffer = new StringBuffer();
- 
             scan = new Scanner(new File(path), "UTF-8");
- 
-            String readdata = "";
-            while (scan.hasNext() && (readdata = scan.nextLine()) != null) {
-                buffer.append(readdata).append('\n');
+
+            this.title = scan.nextLine();
+            this.description = scan.nextLine();        
+            this.mainImagePath = scan.nextLine();            
+
+            String link = "";
+            int i = 0; 
+            while (scan.hasNext() && ((link = scan.nextLine()) != null)) {
+                this.links[i] = link;
+                i++;
             }
-            this.fileOutput = buffer.toString();
 
         } catch (Exception e) {
             e.printStackTrace();

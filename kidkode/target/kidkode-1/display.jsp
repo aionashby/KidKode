@@ -7,15 +7,24 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Hello World JSP!</title>
+<title>Your Result!</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/results.css"/>
+<link rel="stylesheet" href="https://use.typekit.net/wdi1hdi.css">
 </head>
 <body>
-    <c:out value="${text.fileOutput}" />
-    <c:set var="str" value="Our team is so cool"/> 
-    <br>
-    <br>
-    <c:if test="${fn:contains(str,'cool')}">
-        this works!
-    </c:if>
+    <!-- diplaying the text from the txt file the server sent-->
+    <h2 class="heading">You might like</h2>
+    <h1 class="title"><c:out value="${text.title}" /></h1>
+    <p><img src=${text.mainImagePath}><img></p>
+    <p class="description"><c:out value="${text.description}" /></p>
+    
+    <div class = "centerLinks">
+    <h3>Check out some cool websites and games related to your interests below:</h3>
+        <ul>
+        <c:forEach var="link" items="${text.links}">
+            <li><a href=<c:out value="${link}"/>><c:out value="${link}"/></a></li>
+        </c:forEach> 
+        <ul> 
+    <div>
 </body>
 </html
