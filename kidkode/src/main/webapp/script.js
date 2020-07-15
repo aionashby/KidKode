@@ -19,14 +19,14 @@ function buildQuiz(testQuestions) {
   const output = []; // variable to store the HTML output
 
   // for each set of questions, interate through each step and its items
-  var stepNumber = 0;
+  var questionNumber = 0;
   for (let [step, stepItems] of Object.entries(testQuestions)) {
     const answers = []; // variable to store the list of possible answers
     // and for each available answer, add HTML radio button
     for (var option in stepItems.answers) {
       answers.push(
         `<label>
-            <input type="radio" name="question${stepNumber}" value="${option}">
+            <input type="radio" name="question${questionNumber}" value="${option}">
             ${option}
         </label>`
       );
@@ -37,7 +37,7 @@ function buildQuiz(testQuestions) {
       `<div class="question"> ${stepItems.question} </div>
       <div class="answers"> ${answers.join("")} </div>`
     );
-    stepNumber++;
+    questionNumber++;
   }
 
   // finally combine our output list into one string of HTML and put it on the page
@@ -57,10 +57,10 @@ function displayResults(testQuestions) {
   let resultTracker = new Map();
 
   // for each question interate through each carrer in points array...
-  var stepNumber = 0;
+  var questionNumber = 0;
   for (let [step, stepItems] of Object.entries(testQuestions)) {
-    const answerContainer = answerContainers[stepNumber];
-    const selector = `input[name=question${stepNumber}]:checked`;
+    const answerContainer = answerContainers[questionNumber];
+    const selector = `input[name=question${questionNumber}]:checked`;
     const userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
     for (var option in stepItems.answers) {
@@ -73,7 +73,7 @@ function displayResults(testQuestions) {
         }
       }
     }
-    stepNumber++;
+    questionNumber++;
   }
 
   // create a variable to store the HTML output and add results from hashmap into output
@@ -99,6 +99,7 @@ const submitButton = document.getElementById("submit");
 
 /*
  * Obtain quiz questions from the JSON file and build the quiz.
+ * We'll have different JSON files being fetched depending on what the user selects.
  */
 function startQuiz() {
   fetch("quizSteps.json")
@@ -110,6 +111,7 @@ function startQuiz() {
 
 /*
  * Obtain quiz questions from the JSON file and show results of the quiz.
+ * We'll have different JSON files being fetched depending on what the user selects.
  */
 function showResults() {
   fetch("quizSteps.json")
