@@ -114,6 +114,8 @@ label {
   margin: 25px;
   padding: 16px 32px;
   text-decoration: none;
+  position: relative;
+  z-index: 3;
 }
 
 .button:hover {
@@ -144,6 +146,5 @@ label {
 
 #quiz-container {
   position: relative;
-  height: 200px;
-  margin-top: 40px;
+  height: 35vh;
 }
