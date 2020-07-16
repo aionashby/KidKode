@@ -1,3 +1,31 @@
+///////////////
+// FUNCTIONS //
+///////////////
+/*
+ * Obtain quiz questions from the JSON file and build the quiz.
+ * We'll have different JSON files being fetched depending on what the user selects.
+ */
+function startQuiz() {
+  fetch("quizSteps.json")
+    .then(res => res.json())
+    .then(output => {
+      buildQuiz(output);
+      showSlide(currentSlide); // THIS NEEDS TO BE MOVED SOMEWHERE ELSE?
+    });
+}
+
+/*
+ * Obtain quiz questions from the JSON file and show results of the quiz.
+ * We'll have different JSON files being fetched depending on what the user selects.
+ */
+function showResults() {
+  fetch("quizSteps.json")
+    .then(res => res.json())
+    .then(output => {
+      displayResults(output);
+    });
+}
+
 /*
  * Update the hashmap by getting the value (or 0 if the key wasn't
  * in the map).
@@ -26,16 +54,18 @@ function buildQuiz(testQuestions) {
     for (var option in stepItems.answers) {
       answers.push(
         `<label>
-            <input type="radio" name="question${questionNumber}" value="${option}">
-            ${option}
-        </label>`
+              <input type="radio" name="question${questionNumber}" value="${option}">
+              ${option}
+          </label>`
       );
     }
 
     // add question and its answers to the output
     output.push(
-      `<div class="question"> ${stepItems.question} </div>
-      <div class="answers"> ${answers.join("")} </div>`
+      `<div class="slide">
+          <div class="question"> ${stepItems.question} </div>
+          <div class="answers"> ${answers.join("")} </div>
+        </div>`
     );
     questionNumber++;
   }
@@ -81,7 +111,7 @@ function displayResults(testQuestions) {
   function createHTMLElements(value, key, resultTracker) {
     output.push(
       `<h2> ${key} </h2>
-        <h3> ${value} </h3>`
+          <h3> ${value} </h3>`
     );
   }
   resultTracker.forEach(createHTMLElements);
@@ -90,39 +120,62 @@ function displayResults(testQuestions) {
   resultsContainer.innerHTML = output.join("");
 }
 
-/*
- * HTML containers and variables.
- */
+///////////////
+// VARIABLES //
+///////////////
 const quizContainer = document.getElementById("quiz");
 const resultsContainer = document.getElementById("results");
 const submitButton = document.getElementById("submit");
+const previousButton = document.getElementById("previous");
+const nextButton = document.getElementById("next");
+let slides = document.getElementsByClassName("slide");
+let currentSlide = 0;
 
-/*
- * Obtain quiz questions from the JSON file and build the quiz.
- * We'll have different JSON files being fetched depending on what the user selects.
- */
-function startQuiz() {
-  fetch("quizSteps.json")
-    .then(res => res.json())
-    .then(output => {
-      buildQuiz(output);
-    });
-}
-
-/*
- * Obtain quiz questions from the JSON file and show results of the quiz.
- * We'll have different JSON files being fetched depending on what the user selects.
- */
-function showResults() {
-  fetch("quizSteps.json")
-    .then(res => res.json())
-    .then(output => {
-      displayResults(output);
-    });
-}
-
-/*
- * Start Quiz
- */
+////////////////
+// START QUIZ //
+////////////////
 startQuiz();
+
+////////////////
+// PAGINATION //
+////////////////
+/*
+ * The following functions call the showSlide() function with the next or
+ * previous slide.
+ */
+function showNextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function showPreviousSlide() {
+  showSlide(currentSlide - 1);
+}
+
+/*
+ * This function shows and hides the appropriate slides and buttons depending
+ * on which slide is active and which aren't.
+ */
+function showSlide(n) {
+  slides[currentSlide].classList.remove("active-slide");
+  slides[n].classList.add("active-slide");
+  currentSlide = n;
+  if (currentSlide === 0) {
+    previousButton.style.display = "none";
+  } else {
+    previousButton.style.display = "inline-block";
+  }
+  if (currentSlide === slides.length - 1) {
+    nextButton.style.display = "none";
+    submitButton.style.display = "inline-block";
+  } else {
+    nextButton.style.display = "inline-block";
+    submitButton.style.display = "none";
+  }
+}
+
+/////////////////////
+// EVENT LISTENERS //
+/////////////////////
 submitButton.addEventListener("click", showResults);
+previousButton.addEventListener("click", showPreviousSlide);
+nextButton.addEventListener("click", showNextSlide);
