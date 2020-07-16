@@ -1,0 +1,231 @@
+{ 
+    "step0":{
+  		"question": "Are you interested in working in healthcare (like with doctors, nurses and patients)?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Nursing Informatics", "Health Informatics", "Health information Management", "Bioinformatics Software Engineer", "Medical Software Engineer"],
+  				"next": "step1"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Computer Forensics Investigator", "Aerospace Software Engineer", "Bioinformatics Software Engineer", "Medical Software Engineer"],
+  				"next": "step2"
+  			}
+  		},
+  		"previous": null
+  	},
+  	"step1": {
+  		"question": "Do you like helping others/creating things that are useful to others?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Nursing Informatics", "Health Informatics", "Health information Management"],
+  				"next": "step3"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Bioinformatics Software Engineer", "Medical Software Engineer"],
+  				"next": "step4"
+  			}
+  		},
+  		"previous": "step0"
+  	},
+    "step2": {
+  		"question": "Do you like learning about biology (like about cells, DNA, and the way the human body works)?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Bioinformatics Software Engineer", "Medical Software Engineer"],
+  				"next": "step5"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Computer Forensics Investigator", "Aerospace Software Engineer", "Bioinformatics Software Engineer", "Medical Software Engineer"],
+  				"next": "step6"
+  			}
+  		},
+  		"previous": "step0"
+  	},
+  	"step3": {
+  		"question": "Are you interested in becoming a nurse?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Nursing Informatics","Health information Management"],
+  				"next": "step7"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Health Informatics", "Health information Management"],
+  				"next": "step8"
+  			}
+  		},
+  		"previous": "step1"
+  	},
+  	"step4": {
+  		"question": "Do you like solving riddles or puzzles?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Bioinformatics Software Engineer", "Medical Software Engineer"],
+  				"next": "step9"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Bioinformatics Software Engineer", "Medical Software Engineer"],
+  				"next": "step9"
+  			}
+  		},
+  		"previous": "step1"
+  	},
+  	"step5": {
+  		"question": "Do you like searching for/learning about cool science facts?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Bioinformatics Software Engineer", "Medical Software Engineer"],
+  				"next": "step11"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Computer Forensics Investigator", "Aerospace Software Engineer", "Medical Software Engineer"],
+  				"next": "step12"
+  			}
+  		},
+  		"previous": "step2"
+  	},
+  	"step6": {
+  		"question": "Do you like solving riddles or puzzles?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Computer Forensics Investigator", "Aerospace Software Engineer"], 
+  				"next": "step13"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Aerospace Software Engineer", "Medical Software Engineer"],
+  				"next": "step14"
+  			}
+  		},
+  		"step": "step2"
+  	},
+  	"step7": {
+  		"question": "Do you like learning new ways to help people or doing research when you're interested in a topic?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Nursing Informatics"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Health Information Management", "Health Informatics"],
+  				"next": "step16"
+  			}
+  		},
+  		"previous": "step3"
+
+  	},
+    "step8": {
+  		"question": "Do you like preventing bad things or mistakes from happening?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Health Information Management"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Health Informatics"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step3"
+
+  	},
+     "step9": {
+  		"question": "Do you ever think about how scienticsts make discoveries that could lead to new medications and treatments?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Bioinformatics Software Engineer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Medical Software Engineer"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step4"
+
+  	},
+    "step10": {
+  		"question": "Do you ever think about how scientists make discoveries that could lead to new medications and treatments?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Bioinformatics Software Engineer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Medical Software Engineer"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step4"
+
+  	},
+    "step11": {
+      	"question": "Do you ever think about how scientists make discoveries that could lead to new medications and treatments?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Bioinformatics Software Engineer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Medical Software Engineer"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step5"
+    },
+    "step12": {
+  		"question": "Do you like helping others/creating things that are useful to others?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Medical Software Engineer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": [],
+  				"next": null
+  			}
+  		},
+  		"previous": "step5"
+  	},
+    "step13": {
+  		"question": "Do you like airplanes/rocketships?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Aerospace Software Engineer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": [],
+  				"next": null
+  			}
+  		},
+  		"previous": "step6"
+  	}
+
+}
