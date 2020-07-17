@@ -1,6 +1,0 @@
-User Experience/ User Interface Design 
-A User interface (UI for short) is the way the person using a product (the user) interacts with a website, app, or piece of technology (a good example is a TV remote). UI designers design the way apps and website look so that their apps have a good user experience. User Experience (or UX for short) often involves researching and testing what design works best for users so that the app is easy to use and effective! A good user experience depends on the age, interests, abilities and needs of the person using your app. If you like solving problems, designing, and being creative this is a good field for you!
-https://careerfoundry.com/en/blog/uploads/difference-between-ux-ui-ux-ui-min.png
-https://apps.apple.com/ie/app/coda-game-make-your-own-games/id1031841567
-https://sites.google.com
-https://appinventor.mit.edu/
