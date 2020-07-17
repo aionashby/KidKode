@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 public class TestServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         //right now this is hard coded in, but once we connect to the front end we can chage this to a variable
-        ReadFile uxText = new ReadFile("artText/UXData.txt");
+        ReadFile uxText = new ReadFile("artText/VR.txt");
         request.setAttribute("text", uxText);
         RequestDispatcher rd = request.getRequestDispatcher("display.jsp");
         try {

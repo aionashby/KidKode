@@ -2,13 +2,14 @@ package com.google.sps.data;
  
 import java.io.File;
 import java.util.Scanner;
+import java.util.ArrayList;
  
 public class ReadFile {
     private String path;
     private String title;
     private String description;
     private String mainImagePath;  
-    private String[] links;    
+    private ArrayList<String> links;    
     
     //constructor 
     public ReadFile(String path) {
@@ -28,12 +29,12 @@ public class ReadFile {
         return this.mainImagePath;
     }
 
-    public String[] getLinks() {
+    public ArrayList<String> getLinks() {
         return this.links;
     }
 
     private void setFileOutput(String path) {
-        links = new String[3];
+        this.links = new ArrayList<String>();
         Scanner scan = null;
 
         try {
@@ -43,10 +44,10 @@ public class ReadFile {
             this.description = scan.nextLine();        
             this.mainImagePath = scan.nextLine();            
 
-            String link = "";
+            String currentLink = "";
             int i = 0; 
-            while (scan.hasNext() && ((link = scan.nextLine()) != null)) {
-                this.links[i] = link;
+            while (scan.hasNext() && ((currentLink = scan.nextLine()) != null)) {
+                this.links.add(currentLink);
                 i++;
             }
 
