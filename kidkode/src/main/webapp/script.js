@@ -1,9 +1,3 @@
-/*
- * TODO:
- * 1) Clear the user's choice when the user goes to the previous question.
- * 2) Change the next function so that we're not using the hardcoded "yes" or "no".
- */
-
 ///////////////
 // FUNCTIONS //
 ///////////////
