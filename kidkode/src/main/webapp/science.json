@@ -146,7 +146,7 @@
 
   	},
      "step9": {
-  		"question": "Do you ever think about how scienticsts make discoveries that could lead to new medications and treatments?",
+  		"question": "Do you ever think about how scientists make discoveries that could lead to new medications and treatments?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
@@ -212,6 +212,22 @@
   		"previous": "step5"
   	},
     "step13": {
+  		"question": "Do you like solving mysteries?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Computer Forensics Investigator"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": [],
+  				"next": null
+  			}
+  		},
+  		"previous": "step6"
+  	},
+    "step14": {
   		"question": "Do you like airplanes/rocketships?",
   		"answers": {
   			"yes": {

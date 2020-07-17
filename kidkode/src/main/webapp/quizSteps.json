@@ -4,12 +4,12 @@
   		"answers": {
   			"yes": {
   				"choice": "yes",
-  				"points": ["Game Development", "Video Game Technical Art", "Technical Art","Game Developer"],
+  				"points": ["Game Development", "Video Game Technical Art"],
   				"next": "step1"
   			},
   			"no": {
   				"choice": "no",
-  				"points": ["Computer Graphics Researcher", "Graphics Software Engineer", "Interaction Design", "Web Design", "Interactive Design", "User Experience Design/User Interface Design (UX/UI)", "Data Visualization Engineer", "Flash Design", "Virtual Reality"],
+  				"points": ["Computer Graphics Researcher", "Graphics Software Engineer", "Interaction Design", "Web Development", "User Experience Design/User Interface Design (UX/UI)", "Data Visualization Engineer", "Flash Design", "Virtual Reality"],
   				"next": "step2"
   			}
   		},
@@ -25,7 +25,7 @@
   			},
   			"no": {
   				"choice": "no",
-  				"points": ["Game Development", "Graphics Software Engineer", "Flash Design", "Web Design", "User Experience Design/User Interface Design (UX/UI)"],
+  				"points": ["Game Development", "Graphics Software Engineer", "Flash Design", "Web Development", "User Experience Design/User Interface Design (UX/UI)"],
   				"next": "step4"
   			}
   		},
@@ -36,12 +36,12 @@
   		"answers": {
   			"yes": {
   				"choice": "yes",
-  				"points": ["Interaction Design", "Web Design", "Interactive Design", "Flash Design", "User Experience Design/User Interface Design (UX/UI)", "Data Visualization Engineer"],
+  				"points": ["Interaction Design", "Web Development", "Flash Design", "User Experience Design/User Interface Design (UX/UI)", "Data Visualization Engineer"],
   				"next": "step5"
   			},
   			"no": {
   				"choice": "no",
-  				"points": ["Computer Graphics Researcher", "Computer Graphics Software Engineer", "Interaction Design", "Interactive Design", "Flash Design", "Data Visualization Engineer", "Flash Design", "Virtual Reality"],
+  				"points": ["Computer Graphics Researcher", "Computer Graphics Software Engineer", "Interaction Design", "Flash Design", "Data Visualization Engineer", "Flash Design", "Virtual Reality"],
   				"next": "step6"
   			}
   		},
@@ -84,12 +84,12 @@
   		"answers": {
   			"yes": {
   				"choice": "yes",
-  				"points": ["Web Design", "User Experience Design/User Interface Design (UX/UI)", "Data Visualization Engineer", "Flash Design"],
+  				"points": ["Web Development", "User Experience Design/User Interface Design (UX/UI)", "Data Visualization Engineer", "Flash Design"],
   				"next": "step11"
   			},
   			"no": {
   				"choice": "no",
-  				"points": ["Interaction Design", "Interactive Design", "User Experience Design/User Interface Design (UX/UI)"],
+  				"points": ["Interaction Design", "User Experience Design/User Interface Design (UX/UI)"],
   				"next": "step12"
   			}
   		},
@@ -100,7 +100,7 @@
   		"answers": {
   			"yes": {
   				"choice": "yes",
-  				"points": ["Game Development", "Video Game Technical Art", "Game Design", "Graphics Software Engineer", "Interaction Design", "Interactive Design", "Flash Design", "User Experience Design/User Interface Design (UX/UI)"],
+  				"points": ["Game Development", "Video Game Technical Art", "Game Design", "Graphics Software Engineer", "Interaction Design", "Flash Design", "User Experience Design/User Interface Design (UX/UI)"],
   				"next": "step12"
   			},
   			"no": {
@@ -181,7 +181,7 @@
   		"answers": {
   			"yes": {
   				"choice": "yes",
-  				"points": ["Web Design", "User Experience Design/User Interface Design (UX/UI)"],
+  				"points": ["Web Development", "User Experience Design/User Interface Design (UX/UI)"],
   				"next": "step23"
   			},
   			"no": {
@@ -197,9 +197,7 @@
   		"answers": {
   			"yes": {
   				"choice": "yes",
-  				"points": ["Interaction Design", "Interactive Design",
-  					"User Experience Design/User Interface Design (UX/UI)", "Data Visualization Engineer"
-  				],
+  				"points": ["Interaction Design", "User Experience Design/User Interface Design (UX/UI)", "Data Visualization Engineer"],
   				"next": null
   			},
   			"no": {
