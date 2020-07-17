@@ -1,3 +1,9 @@
+/*
+ * TODO:
+ * 1) Clear the user's choice when the user goes to the previous question.
+ * 2) Change the next function so that we're not using the hardcoded "yes" or "no".
+ */
+
 ///////////////
 // FUNCTIONS //
 ///////////////
@@ -6,11 +12,11 @@
  * We'll have different JSON files being fetched depending on what the user selects.
  */
 function startQuiz() {
-  fetch("quizSteps.json")
+  fetch(jsonFile)
     .then(res => res.json())
     .then(output => {
       buildQuiz(output);
-      showSlide(currentSlide); // THIS NEEDS TO BE MOVED SOMEWHERE ELSE?
+      showSlide(currentStep, null);
     });
 }
 
@@ -19,7 +25,7 @@ function startQuiz() {
  * We'll have different JSON files being fetched depending on what the user selects.
  */
 function showResults() {
-  fetch("quizSteps.json")
+  fetch(jsonFile)
     .then(res => res.json())
     .then(output => {
       displayResults(output);
@@ -62,7 +68,7 @@ function buildQuiz(testQuestions) {
 
     // add question and its answers to the output
     output.push(
-      `<div class="slide">
+      `<div class="slide" id="${step}">
           <div class="question"> ${stepItems.question} </div>
           <div class="answers"> ${answers.join("")} </div>
         </div>`
@@ -123,13 +129,18 @@ function displayResults(testQuestions) {
 ///////////////
 // VARIABLES //
 ///////////////
+// HTML Containers and Elements
 const quizContainer = document.getElementById("quiz");
 const resultsContainer = document.getElementById("results");
 const submitButton = document.getElementById("submit");
 const previousButton = document.getElementById("previous");
 const nextButton = document.getElementById("next");
-let slides = document.getElementsByClassName("slide");
-let currentSlide = 0;
+
+// Variables
+let jsonFile = "art.json"; // HARDCODED: to be changed depending on the user's favorite activity
+let currentStep = "step0"; // the step we are currently on
+var userPath = ["step0"]; // this array keeps track of the user's pathway
+let userChoice = "no"; // HARDCODED: the user's choice for the current question
 
 ////////////////
 // START QUIZ //
@@ -140,37 +151,78 @@ startQuiz();
 // PAGINATION //
 ////////////////
 /*
- * The following functions call the showSlide() function with the next or
- * previous slide.
- */
-function showNextSlide() {
-  showSlide(currentSlide + 1);
-}
-
-function showPreviousSlide() {
-  showSlide(currentSlide - 1);
-}
-
-/*
  * This function shows and hides the appropriate slides and buttons depending
  * on which slide is active and which aren't.
  */
-function showSlide(n) {
-  slides[currentSlide].classList.remove("active-slide");
-  slides[n].classList.add("active-slide");
-  currentSlide = n;
-  if (currentSlide === 0) {
-    previousButton.style.display = "none";
+function showSlide(newStep, move) {
+  var toRemove = document.getElementById(currentStep);
+  if (newStep != null) {
+    // remove current slide as active slide
+    toRemove.classList.remove("active-slide");
+    // assign new slide as active slide
+    var newSlide = document.getElementById(newStep);
+    newSlide.classList.add("active-slide");
+    // update the current step
+    currentStep = newStep;
   } else {
-    previousButton.style.display = "inline-block";
+    // if the user reached the end of the quiz
+    toRemove.classList.remove("active-slide");
   }
-  if (currentSlide === slides.length - 1) {
+  if ((move === null || move === "previous") && newStep === "step0") {
+    // if new slide is the first slide
+    previousButton.style.display = "none";
+    nextButton.style.display = "inline-block";
+    submitButton.style.display = "none";
+  } else if (move === "next" && newStep === null) {
+    // if new slide is the last slide
+    previousButton.style.display = "inline-block";
     nextButton.style.display = "none";
     submitButton.style.display = "inline-block";
   } else {
+    // if new slide is any slide in between
+    previousButton.style.display = "inline-block";
     nextButton.style.display = "inline-block";
     submitButton.style.display = "none";
   }
+}
+
+/*
+ * This function returns the next property of the current question, based
+ * on the choice the user picked in this question. As of now, the choice is hardcoded.
+ */
+function getNext(testQuestions, currentStep, userChoice) {
+  for (let [step, stepItems] of Object.entries(testQuestions)) {
+    if (step === currentStep) {
+      for (var option in stepItems.answers) {
+        if (option === userChoice) {
+          return stepItems.answers[option].next;
+        }
+      }
+    }
+  }
+}
+
+/*
+ * This function shows the next slide, based on the current question and the choice
+ * the user picked. As of now, the choice is hardcoded.
+ */
+function showNextSlide() {
+  fetch(jsonFile)
+    .then(res => res.json())
+    .then(output => {
+      let newStep = getNext(output, currentStep, userChoice);
+      userPath.push(newStep);
+      showSlide(newStep, "next");
+    });
+}
+
+/*
+ * This function shows the last slide the user saw (the last step in the
+ * userPath array, which is then removed from the array).
+ */
+function showPreviousSlide() {
+  let newStep = userPath.pop();
+  showSlide(userPath[userPath.length - 1], "previous");
 }
 
 /////////////////////
