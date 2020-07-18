@@ -85,7 +85,7 @@ function displayResults(testQuestions) {
   const answerContainers = quizContainer.querySelectorAll(".answers");
   // create empty hashmap for the user's results
   let resultTracker = new Map();
-  // for each question interate through each carrer in points array...
+  // for each question iterate through each carrer in points array...
   var questionNumber = 0;
   for (let [step, stepItems] of Object.entries(testQuestions)) {
     const answerContainer = answerContainers[questionNumber];
