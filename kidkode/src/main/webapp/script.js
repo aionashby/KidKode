@@ -12,6 +12,7 @@ function startQuiz() {
       buildQuiz(output);
       showSlide(currentStep, null);
     });
+   
 }
 
 /*
@@ -73,6 +74,7 @@ function buildQuiz(testQuestions) {
   }
   // finally combine our output list into one string of HTML and put it on the page
   quizContainer.innerHTML = output.join("");
+  $("body").css("visibility", "visible");
 }
 
 /*
@@ -130,13 +132,14 @@ const nextButton = document.getElementById("next");
 let currentStep = "step0"; // the step we are currently on
 var userPath = ["step0"]; // this array keeps track of the user's pathway
 var stepQuestionNumbers = new Map(); // map that keeps track of the steps and corresponsing question number
-let jsonFile = "build.json"; // HARDCODED: to be changed depending on the user's favorite activity
+let jsonFile = "quizSteps/" + "build.json"; // HARDCODED: to be changed depending on the user's favorite activity
 
 ////////////////
 // START QUIZ //
 ////////////////
-startQuiz();
-
+$( window ).on( "load", function() {
+    startQuiz(); 
+});
 ////////////////
 // PAGINATION //
 ////////////////
@@ -186,7 +189,13 @@ function getChoice(givenStep) {
   const answerContainer = answerContainers[questionNumber];
   const selector = `input[name=question${questionNumber}]:checked`;
   const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-  return userAnswer;
+  if (userAnswer === undefined) {
+    window.alert("You need to choose an option!");
+    return null;
+  }
+  else {
+    return userAnswer;
+  }
 }
 
 /*
@@ -207,19 +216,21 @@ function getNext(testQuestions, currentStep, userChoice) {
 
 /*
  * This function shows the next slide, based on the current question and the choice
- * the user picked.
+ * the user picked. If the user didn't select anything (userChoice is null), then the JSON is not fetched.
  */
 function showNextSlide() {
   // get the choice the user picked for this current question
   var userChoice = getChoice(currentStep);
-  // fetch JSON file to find out what the next question is, based on user choice
-  fetch(jsonFile)
-    .then(res => res.json())
-    .then(output => {
-      let newStep = getNext(output, currentStep, userChoice);
-      userPath.push(newStep);
-      showSlide(newStep, "next");
-    });
+  if (userChoice != null) {
+  //fetch JSON file to find out what the next question is, based on user choice. 
+    fetch(jsonFile)
+      .then(res => res.json())
+      .then(output => {
+        let newStep = getNext(output, currentStep, userChoice);
+        userPath.push(newStep);
+        showSlide(newStep, "next");
+      });
+  }
 }
 
 /*
