@@ -1,0 +1,6 @@
+Machine Learning Engineer
+Machine learning engineers design self-running software to automate predictive models. Each time the software performs an operation, it uses those results to carry out future operations with a greater degree of accuracy. This is how the software, or machine, “learns.”
+https://www.gqrgm.com/wp-content/uploads/2018/10/How-To-Become-A-Machine-Learning-Engineer.jpg 
+https://www.mathplayground.com/SaveTheZogs/index.html
+https://www.mathplayground.com/probability.html
+https://www.mathplayground.com/logic_laser_trap.html
