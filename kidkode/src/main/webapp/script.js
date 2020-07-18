@@ -44,12 +44,15 @@ function getOrDefault(key, map) {
  * elements of the quiz.
  */
 function buildQuiz(testQuestions) {
-  const output = []; // variable to store the HTML output
-
+  // variable to store the HTML output
+  const output = [];
   // for each set of questions, interate through each step and its items
   var questionNumber = 0;
   for (let [step, stepItems] of Object.entries(testQuestions)) {
-    const answers = []; // variable to store the list of possible answers
+    // store step and corresponding question number in stepQuestionNumbers map
+    stepQuestionNumbers.set(step, questionNumber);
+    // variable to store the list of possible answers
+    const answers = [];
     // and for each available answer, add HTML radio button
     for (var option in stepItems.answers) {
       answers.push(
@@ -59,7 +62,6 @@ function buildQuiz(testQuestions) {
           </label>`
       );
     }
-
     // add question and its answers to the output
     output.push(
       `<div class="slide" id="${step}">
@@ -69,7 +71,6 @@ function buildQuiz(testQuestions) {
     );
     questionNumber++;
   }
-
   // finally combine our output list into one string of HTML and put it on the page
   quizContainer.innerHTML = output.join("");
 }
@@ -80,19 +81,16 @@ function buildQuiz(testQuestions) {
  * hashmap, and increment the points for the corresponding careers in the hashmap.
  */
 function displayResults(testQuestions) {
-  // get answer containers from quiz
+  // get all answer containers
   const answerContainers = quizContainer.querySelectorAll(".answers");
-
   // create empty hashmap for the user's results
   let resultTracker = new Map();
-
-  // for each question interate through each carrer in points array...
+  // for each question iterate through each carrer in points array...
   var questionNumber = 0;
   for (let [step, stepItems] of Object.entries(testQuestions)) {
     const answerContainer = answerContainers[questionNumber];
     const selector = `input[name=question${questionNumber}]:checked`;
     const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-
     for (var option in stepItems.answers) {
       if (userAnswer === stepItems.answers[option].choice) {
         // ...and increment points for appropriate careers in hashmap
@@ -105,7 +103,6 @@ function displayResults(testQuestions) {
     }
     questionNumber++;
   }
-
   // create a variable to store the HTML output and add results from hashmap into output
   const output = [];
   function createHTMLElements(value, key, resultTracker) {
@@ -115,7 +112,6 @@ function displayResults(testQuestions) {
     );
   }
   resultTracker.forEach(createHTMLElements);
-
   // show total points for each category in hashmap
   resultsContainer.innerHTML = output.join("");
 }
@@ -131,10 +127,10 @@ const previousButton = document.getElementById("previous");
 const nextButton = document.getElementById("next");
 
 // Variables
-let jsonFile = "art.json"; // HARDCODED: to be changed depending on the user's favorite activity
 let currentStep = "step0"; // the step we are currently on
 var userPath = ["step0"]; // this array keeps track of the user's pathway
-let userChoice = "no"; // HARDCODED: the user's choice for the current question
+var stepQuestionNumbers = new Map(); // map that keeps track of the steps and corresponsing question number
+let jsonFile = "build.json"; // HARDCODED: to be changed depending on the user's favorite activity
 
 ////////////////
 // START QUIZ //
@@ -181,6 +177,19 @@ function showSlide(newStep, move) {
 }
 
 /*
+ * This function takes in the step of the current question and returns the choice
+ * the user picked for that question.
+ */
+function getChoice(givenStep) {
+  const questionNumber = stepQuestionNumbers.get(givenStep);
+  const answerContainers = quizContainer.querySelectorAll(".answers");
+  const answerContainer = answerContainers[questionNumber];
+  const selector = `input[name=question${questionNumber}]:checked`;
+  const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+  return userAnswer;
+}
+
+/*
  * This function returns the next property of the current question, based
  * on the choice the user picked in this question. As of now, the choice is hardcoded.
  */
@@ -198,9 +207,12 @@ function getNext(testQuestions, currentStep, userChoice) {
 
 /*
  * This function shows the next slide, based on the current question and the choice
- * the user picked. As of now, the choice is hardcoded.
+ * the user picked.
  */
 function showNextSlide() {
+  // get the choice the user picked for this current question
+  var userChoice = getChoice(currentStep);
+  // fetch JSON file to find out what the next question is, based on user choice
   fetch(jsonFile)
     .then(res => res.json())
     .then(output => {
@@ -215,7 +227,13 @@ function showNextSlide() {
  * userPath array, which is then removed from the array).
  */
 function showPreviousSlide() {
-  let newStep = userPath.pop();
+  // clear the user's choice for the current question
+  var questionNumber = "question" + stepQuestionNumbers.get(currentStep);
+  var answerContainer = document.getElementsByName(questionNumber);
+  for (var i = 0; i < answerContainer.length; i++)
+    answerContainer[i].checked = false;
+  // access the last question and delete it from userPath array
+  userPath.pop();
   showSlide(userPath[userPath.length - 1], "previous");
 }
 
