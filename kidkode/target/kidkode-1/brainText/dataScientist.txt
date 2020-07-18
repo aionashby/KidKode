@@ -1,0 +1,6 @@
+Data Scientist
+Data Scientists are responsible for the collection, cleaning and munging of data to meet the company's purpose. Duties vary according to the industry and may include experimental frameworks for product development and machine learning with the aim to lay a strong data foundation for robust analytics to be performed.
+https://miro.medium.com/proxy/1*j_xDdd5jgmoLh_mmD_RGKg.jpeg 
+https://www.mathplayground.com/SaveTheZogs/index.html
+https://www.mathplayground.com/probability.html
+https://www.mathplayground.com/logic_laser_trap.html
