@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>KidKode</title>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <link rel="stylesheet" href="test_quiz_style.css">
-        <link rel="stylesheet" href="https://use.typekit.net/xfb2kyg.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="script.js" async></script>
-    </head>
-    <body>
-        <div id="quiz"></div>
-        <button id="submit">See Results</button>
-        <div id="results"></div>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>KidKode</title>
+    <link rel="stylesheet" href="test_quiz_style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/xfb2kyg.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js" async></script>
+  </head>
+  <body>
+    <div id="quiz-container">
+      <div id="quiz"></div>
+    </div>
+    <button class="button" id="previous">🡄 Back</button>
+    <button class="button" id="next">Next 🡆</button>
+    <button class="button" id="submit">See Results</button>
+    <div id="results"></div>
+  </body>
 </html>
