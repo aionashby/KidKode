@@ -1,0 +1,290 @@
+{ 
+    "step0":{
+  		"question": "Are you more interested in how networks work (like WIFI or bluetooth) or how systems work (like Mac or Windows computers)?",
+  		"systems": {
+  			"systems": {
+  				"choice": "systems",
+  				"points": ["Systems Analyst", "Systems Administrator", "Systems Engineering", "Systems Architecture"],
+  				"next": "step1"
+  			},
+  			"networks": {
+  				"systems": "networks",
+  				"points": ["Software Architecture", "Software Release Management", "Software Tester", "Software Development", "Game Director", "Game Tester", "Game Programming", "Game Production", "Statistical Programmer", "IT Operations Analyst", "Mobile App Development", "Software Engineer", "Network Architecture", "Network Design", "Network Engineer", "Network Administrator"],
+  				"next": "step3"
+  			}
+  		},
+  		"previous": null
+  	},
+  	"step1": {
+  		"question":"When working in group projects, would you rather spend your time as the leader and make large decisions/plans or just spend your time actually working on the project?",
+  		"answers": {
+  			"leader": {
+  				"choice": "leader",
+  				"points": ["Systems Analyst", "Systems Administrator", "Systems Engineering"],
+  				"next": "step3"
+  			},
+  			"worker": {
+  				"clear": "worker",
+  				"points": ["Systems Analyst", "Systems Engineering", "Systems Architecture"],
+  				"next": "step4"
+  			}
+  		},
+  		"previous": "step0"
+  	},
+    "step2": {
+  		"question":  "Do you like working on really broad projects or more specific ones?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Software Architecture", "Software Release Management", "Software Tester", "Software Development"],
+  				"next": "step5"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Game Director", "Game Tester", "Game Programming", "Game Production", "Statistical Programmer", "IT Operations Analyst", "Mobile App Development", "Software Engineer", "Network Architecture", "Network Design", "Network Engineer", "Network Administrator"],
+  				"next": "step6"
+  			}
+  		},
+  		"previous": "step0"
+  	},
+  	"step3": {
+  		"question": "Do you like designing things",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Systems Analyst", "Systems Engineer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Systems Administrator"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step1"
+  	},
+  	"step4": {
+  		"question": "Do you like testing things that you build/checking over your homework to make sure everything is as expected?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Systems Analyst", "Systems Engineer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Systems Architecture"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step1"
+  	},
+  	"step5": {
+  		"question": "When working in group projects, would you rather spend your time as the leader and make large decisions/plans or just spend your time actually working on the project?",
+  		"leader": {
+  			"yes": {
+  				"choice": "leader",
+  				"points": ["Software Architecture", "Software Release Management"], 
+  				"next": "step11"
+  			},
+  			"worker": {
+  				"choice": "worker",
+  				"points": ["Software Tester","Software Development"],
+  				"next": "step12"
+  			}
+  		},
+  		"previous": "step2"
+  	},
+  	"step6": {
+  		"question": "Do you enjoy gaming?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Game Director", "Game Production", "Game Tester", "Game Programming"], 
+  				"next": "step13"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Statistical Programmer", "IT Operations Analyst", "Mobile App Development", "Software Engineer", "Network Architecture", "Network Design", "Network Engineer", "Network Administrator"],
+  				"next": "step14"
+  			}
+  		},
+  		"step": "step2"
+  	},
+    "step11": {
+      	"question": "Do you enjoy talking to other people?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Software Architecture"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Software Release Management"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step5"
+    },
+    "step12": {
+  		"question": "Do you like testing things that you build/checking over your homework to make sure everything is as expected?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Software Tester"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Software Development"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step5"
+  	},
+    "step13": {
+  		"question": "Do you enjoy leading/guiding people?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Game Director", "Game Production"],
+  				"next": "step27"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Game Programming", "Game Tester"],
+  				"next": "step28"
+  			}
+  		},
+  		"previous": "step6"
+  	},
+    "step14": {
+  		"question": "Are you interested in how networks (things like Wi-Fi and Bluetooth) work?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Network Administrator", "Network Engineer", "Network Design", "Network Architecture"],
+  				"next": "step29"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Computer Hardware Engineer"],
+  				"next": "step30"
+  			}
+  		},
+  		"previous": "step6"
+  	},
+    "step27": {
+  		"question": "Do you like designing things?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Game Director"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Game Production"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step13"
+  	},
+    "step28": {
+  		"question": "Would you rather test videogames out or create your own videogames?",
+  		"answers": {
+  			"test": {
+  				"choice": "test",
+  				"points": ["Game Tester"],
+  				"next": null
+  			},
+  			"create": {
+  				"choice": "create",
+  				"points": ["Game Programming"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step13"
+  	},
+    "step29": {
+  		"question": "Would you be interested in making sure a company's networks (the way computers connect) and technology work?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Network Design", "Network Architecture"],
+  				"next": "step29"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Network Administrator", "Network Engineer"],
+  				"next": "step30"
+  			}
+  		},
+  		"previous": "step14"
+  	},
+    "step59": {
+  		"question": "If you had to build something for a school project, would you rather outline it or just start building right away?",
+  		"answers": {
+  			"build": {
+  				"choice": "build",
+  				"points": ["Network Architecture"],
+  				"next": null
+  			},
+  			"outline": {
+  				"choice": "outline",
+  				"points": ["Network Design"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step29"
+  	},
+    "step60": {
+  		"question": "Would you like to research and build new technologies?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Network Engineer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Network Administrator","Network Engineer"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step29"
+  	},
+    "step61": {
+  		"question": "Do you enjoy doing math?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Statistical Programmer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["IT Operations Analyst"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step30"
+  	},
+    "step62": {
+        "question": "Do you enjoy playing games/using apps on phones, tablets or other mobile devices?",
+        "answers": {
+            "yes": {
+                "choice": "yes",
+                "points": ["Mobile App Development"],
+                "next": null
+            },
+            "no": {
+                "choice": "no",
+                "points": ["Software Engineer"],
+                "next": null
+            }
+        },
+        "previous": "step30"
+    }
+}
