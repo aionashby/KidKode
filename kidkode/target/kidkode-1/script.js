@@ -2,6 +2,20 @@
 // FUNCTIONS //
 ///////////////
 /*
+ * Parses the url query string to retrieve the value associated with the paramater passed in.
+ * We'll use this to retrieve which JSON we should load based on the URL.
+ */
+function GetURLParameter(searchedParam){
+    let URL = window.location.search.substring(1);
+    let URLVariables = URL.split('&');
+    for (let i = 0; i < URLVariables.length; i++) {
+        let currentParam = URLVariables[i].split('=');
+        if (currentParam[0] == searchedParam) {
+            return currentParam[1];
+        }
+    }
+}
+/*
  * Obtain quiz questions from the JSON file and build the quiz.
  * We'll have different JSON files being fetched depending on what the user selects.
  */
@@ -132,7 +146,7 @@ const nextButton = document.getElementById("next");
 let currentStep = "step0"; // the step we are currently on
 var userPath = ["step0"]; // this array keeps track of the user's pathway
 var stepQuestionNumbers = new Map(); // map that keeps track of the steps and corresponsing question number
-let jsonFile = "quizSteps/" + "build.json"; // HARDCODED: to be changed depending on the user's favorite activity
+let jsonFile = "quizSteps/" + GetURLParameter("act") + ".json"; // HARDCODED: to be changed depending on the user's favorite activity
 
 ////////////////
 // START QUIZ //
@@ -216,14 +230,13 @@ function getNext(testQuestions, currentStep, userChoice) {
 
 /*
  * This function shows the next slide, based on the current question and the choice
- * the user picked.
+ * the user picked. If the user didn't select anything (userChoice is null), then the JSON is not fetched.
  */
 function showNextSlide() {
   // get the choice the user picked for this current question
   var userChoice = getChoice(currentStep);
   if (userChoice != null) {
-  /*fetch JSON file to find out what the next question is, based on user choice. 
-  If they didn't select anything (userChoice is null), then don't move forward*/
+  //fetch JSON file to find out what the next question is, based on user choice. 
     fetch(jsonFile)
       .then(res => res.json())
       .then(output => {

@@ -9,7 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse; 
-@WebServlet("/result")
+@WebServlet("/chooseQuiz")
 public class DataServlet extends HttpServlet {
     private class Result {
         private String title;
@@ -94,54 +94,23 @@ public class DataServlet extends HttpServlet {
                 links.add("https://mediasmarts.ca/game/privacy-playground-first-adventure-three-cyberpigs");
             }
         }
-    }
-    private Result data; 
+    } 
     private String code;
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        if (request.getParameter("branchCode") != null) {
-            this.code = request.getParameter("branchCode"); 
-            this.data = new Result(this.code);
+        this.code = request.getParameter("branchCode");
+        if (this.code != null) {
+            response.sendRedirect("/test_quiz.html?act="+ code);
         } 
-        PrintWriter out = response.getWriter();
-        String newline = System.getProperty("line.separator");
-        response.setContentType("text/html;charset=UTF-8");
-        out.println("<!DOCTYPE html>");
-        out.println("<html>");
-        out.println("<head>");
-        out.println("<meta charset=\"utf-8\">");
-        out.println("<link rel=\"stylesheet\" href=\"https://use.typekit.net/wdi1hdi.css\">");
-        out.println("<style>");
-        out.println("body{font-family: proxima-soft, sans-serif;}");
-        out.println(".title{ color: #00C5A4;" + newline + "font-weight: bold;"+ newline + "text-align: center;}");
-        out.println(".heading{ color: #000000;" +  newline + "font-weight: bold;"+ newline + "text-align: center;}");
-        out.println("p {text-align: center;" + newline + "color:##717171;" + "margin: 2%;" + newline + "font-weight: 500;}");
-        out.println("h3 {text-align: center;" + newline + "color:#000000;" + newline + "font-size: medium}");
-        out.println("a {text-align: center;" + newline + "color: #00C5A4;}");
-        out.println(".centerLinks {display: flex;"+ newline + "width: 50%;" + newline + "margin: 0 auto;" + newline + "justify-content: flex-start;" + newline + "flex-wrap: wrap;}");
-        out.println("img {max-width: 40%;" + newline + "height: auto;}");
-        out.println("</style>");
-        out.println("</head>");
-        out.println("</body>");
-        out.println("<h2 class=\"heading\">You might like</h2>");
-        out.println("<h1 class=\"title\">" + this.data.title + "!</h1>");
-        out.println("<p><img src=" + this.data.mainImagePath + "><img></p>");
-        out.println("<p>" + this.data.description + "</p>");
-        out.println("<div class=\"centerLinks\">");
-        out.println("<h3>Check out some cool resources and games related to your interests below:</h3>");
-        int numLinks = this.data.links.size();
-        for (int i = 0; i < numLinks; i++) {
-            out.println("<li><a href=" + this.data.links.get(i) + ">" + this.data.links.get(i) + "</a></li>");
+        else {
+            response.sendRedirect("/");
         }
-        out.println("</div>");
-        out.println("</body>");
-        out.println("</html>");
     }
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         //require the user to select from the dropdown (redirect them to home)
-        if (this.data == null) {
+        if (this.code == null) {
             response.sendRedirect("/");
         }
         //if they have already selected, let them just reload their last result
