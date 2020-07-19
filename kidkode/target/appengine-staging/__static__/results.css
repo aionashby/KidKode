@@ -1,0 +1,101 @@
+body { 
+    font-family: proxima-soft, sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #00C5A4;
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 22px;
+    font-family: proxima-soft, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 10px 40px;
+    padding: 10px;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+.navbar a:hover {
+    color: rgb(0, 118, 99);
+    transition-duration: 0.3s;
+}
+
+.navbar a.active {
+    color: #002C25;
+}
+
+.title { 
+    color: rgb(0, 118, 99);
+    transition-duration: 0.3s;
+   /* #00C5A4;*/
+    font-weight: bolder;
+    text-align: center;
+    font-size: 3em; 
+    margin: 1vh 2vw;
+    letter-spacing:0.08em;
+}
+
+.heading { 
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.6em; 
+    margin: 3vh 3vw 2vh;
+ }
+
+.description {
+    text-align: center;
+    color: #717171;
+    margin: 2%;
+    font-weight: 600;
+    font-size: 1.3em; 
+}
+
+p {
+    text-align: center;
+    margin: 2%;
+}
+
+h3 {
+    text-align: center;
+    color:#000000;
+    font-size: medium;
+}
+
+a {
+    text-align: "center";
+    font-weight: 500; 
+    color : #00C5A4;
+    /*"#00C5A4";*/
+}
+a:visited {
+    color : "#00C5A4";
+}
+
+img {
+    transition-duration: 0.3s;
+    max-width: 40%;
+    border-radius: 5%;
+    height: auto;
+    border: 4px solid #717171;
+}
+
+.centerLinks{
+    width:50%;
+    margin: 0 auto;
+}
+   
