@@ -2,6 +2,20 @@
 // FUNCTIONS //
 ///////////////
 /*
+ * Parses the url query string to retrieve the value associated with the paramater passed in.
+ * We'll use this to retrieve which JSON we should load based on the URL.
+ */
+function GetURLParameter(searchedParam){
+    let URL = window.location.search.substring(1);
+    let URLVariables = URL.split('&');
+    for (let i = 0; i < URLVariables.length; i++) {
+        let currentParam = URLVariables[i].split('=');
+        if (currentParam[0] == searchedParam) {
+            return currentParam[1];
+        }
+    }
+}
+/*
  * Obtain quiz questions from the JSON file and build the quiz.
  * We'll have different JSON files being fetched depending on what the user selects.
  */
@@ -12,6 +26,7 @@ function startQuiz() {
       buildQuiz(output);
       showSlide(currentStep, null);
     });
+   
 }
 
 /*
@@ -73,6 +88,7 @@ function buildQuiz(testQuestions) {
   }
   // finally combine our output list into one string of HTML and put it on the page
   quizContainer.innerHTML = output.join("");
+  $("body").css("visibility", "visible");
 }
 
 /*
@@ -103,17 +119,23 @@ function displayResults(testQuestions) {
     }
     questionNumber++;
   }
-  // create a variable to store the HTML output and add results from hashmap into output
-  const output = [];
-  function createHTMLElements(value, key, resultTracker) {
-    output.push(
-      `<h2> ${key} </h2>
-          <h3> ${value} </h3>`
-    );
+  // get the highest scoring career category (we'll update this so that we send
+  // the result to the server and show the appropriate results page)
+  const iter = resultTracker.entries();
+  var highestScoring = iter.next().value;
+  function getBestCareer(value, key, resultTracker) {
+    if (value > highestScoring[1]) {
+      highestScoring = [key, value];
+    }
   }
-  resultTracker.forEach(createHTMLElements);
-  // show total points for each category in hashmap
-  resultsContainer.innerHTML = output.join("");
+  resultTracker.forEach(getBestCareer);
+
+  // send name of career to server
+  $.post("/result", { bestCareer : highestScoring[0], activity: GetURLParameter("act")},
+    function(data) {
+        window.location.replace('/result');
+        //window.location.href ='/result';
+    });
 }
 
 ///////////////
@@ -130,13 +152,14 @@ const nextButton = document.getElementById("next");
 let currentStep = "step0"; // the step we are currently on
 var userPath = ["step0"]; // this array keeps track of the user's pathway
 var stepQuestionNumbers = new Map(); // map that keeps track of the steps and corresponsing question number
-let jsonFile = "build.json"; // HARDCODED: to be changed depending on the user's favorite activity
+let jsonFile = "quizSteps/" + GetURLParameter("act") + ".json"; // HARDCODED: to be changed depending on the user's favorite activity
 
 ////////////////
 // START QUIZ //
 ////////////////
-startQuiz();
-
+$( window ).on( "load", function() {
+    startQuiz(); 
+});
 ////////////////
 // PAGINATION //
 ////////////////
@@ -186,7 +209,13 @@ function getChoice(givenStep) {
   const answerContainer = answerContainers[questionNumber];
   const selector = `input[name=question${questionNumber}]:checked`;
   const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-  return userAnswer;
+  if (userAnswer === undefined) {
+    window.alert("You need to choose an option!");
+    return null;
+  }
+  else {
+    return userAnswer;
+  }
 }
 
 /*
@@ -207,19 +236,21 @@ function getNext(testQuestions, currentStep, userChoice) {
 
 /*
  * This function shows the next slide, based on the current question and the choice
- * the user picked.
+ * the user picked. If the user didn't select anything (userChoice is null), then the JSON is not fetched.
  */
 function showNextSlide() {
   // get the choice the user picked for this current question
   var userChoice = getChoice(currentStep);
-  // fetch JSON file to find out what the next question is, based on user choice
-  fetch(jsonFile)
-    .then(res => res.json())
-    .then(output => {
-      let newStep = getNext(output, currentStep, userChoice);
-      userPath.push(newStep);
-      showSlide(newStep, "next");
-    });
+  if (userChoice != null) {
+  //fetch JSON file to find out what the next question is, based on user choice. 
+    fetch(jsonFile)
+      .then(res => res.json())
+      .then(output => {
+        let newStep = getNext(output, currentStep, userChoice);
+        userPath.push(newStep);
+        showSlide(newStep, "next");
+      });
+  }
 }
 
 /*
