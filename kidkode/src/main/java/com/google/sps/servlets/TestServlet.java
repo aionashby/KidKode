@@ -42,11 +42,11 @@ public class TestServlet extends HttpServlet {
         fileMappings.put("Robotics Engineer", "robotEng");
 
         //problem solving text 
-        fileMappings.put("Game Director", "gameDirector");//+ file name and occurences in json to directing
+        fileMappings.put("Game Director", "gameDirector");//+ must change file name and occurences in json to make it correct
         fileMappings.put("Game Production", "gameProduction");
         fileMappings.put("Game Programming", "gameProgramming");
         fileMappings.put("Game Tester", "gameTester");
-        fileMappings.put("IT Operations Analyst","ITOperationsAnalyst"); //? nneds extra words to make it cgrammatically correct
+        fileMappings.put("IT Operations Analyst","ITOperationsAnalyst"); //? needs extra words to make it grammatically correct
         fileMappings.put("Mobile App Development", "mobileAppDev");
         fileMappings.put("Network Administrator", "networkAdmin");//+
         fileMappings.put("Network Architecture", "networkArchitect");//+
@@ -90,10 +90,9 @@ public class TestServlet extends HttpServlet {
         fileMappings.put("Web Editor", "webEditor");//*
         fileMappings.put("Webmaster", "webmaster");//?
 
-        System.out.println("HEEEEEEEEEEEEEEEREEEE"+ career);
         String textPath = this.field + "Text/" + fileMappings.get(career) + ".txt";
-        ReadFile uxText = new ReadFile(textPath);
-        request.setAttribute("text", uxText);
+        ReadFile text = new ReadFile(textPath);
+        request.setAttribute("text", text);
         RequestDispatcher rd = request.getRequestDispatcher("display.jsp");
         try {
             rd.forward(request,response);
