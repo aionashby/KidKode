@@ -77,19 +77,6 @@ body {
   box-sizing: border-box;
 }
 
-.column {
-  float: left;
-  width: 25%;
-}
 
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
 
-img {
-  border-radius: 25%;
-}
 
