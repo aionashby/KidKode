@@ -1,7 +1,7 @@
 { 
     "step0":{
   		"question": "Are you more interested in how networks work (like WIFI or bluetooth) or how systems work (like Mac or Windows computers)?",
-  		"systems": {
+  		"answers": {
   			"systems": {
   				"choice": "systems",
   				"points": ["Systems Analyst", "Systems Administrator", "Systems Engineering", "Systems Architecture"],
@@ -48,7 +48,7 @@
   		"previous": "step0"
   	},
   	"step3": {
-  		"question": "Do you like designing things",
+  		"question": "Do you like designing things?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
@@ -81,8 +81,8 @@
   	},
   	"step5": {
   		"question": "When working in group projects, would you rather spend your time as the leader and make large decisions/plans or just spend your time actually working on the project?",
-  		"leader": {
-  			"yes": {
+        "answers": {
+  			"leader": {
   				"choice": "leader",
   				"points": ["Software Architecture", "Software Release Management"], 
   				"next": "step11"

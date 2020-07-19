@@ -1,4 +1,4 @@
-Software Release Manager
+Software Release Management
 Software release managers are responsible for the release management lifecycle, focusing on coordinating various aspects of production and projects into one integrated solution. They are responsible for ensuring that resources, timelines, and the overall quality of the process are all considered and accounted for.
 https://miro.medium.com/max/4096/1*xRa7ZuBvVZb9Fd8HxZzemw.jpeg 
 https://www.webgamesonline.com/towers-of-hanoi/

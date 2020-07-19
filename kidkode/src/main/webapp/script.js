@@ -131,9 +131,10 @@ function displayResults(testQuestions) {
   resultTracker.forEach(getBestCareer);
 
   // send name of career to server
-  $.post("/result", { bestCareer : highestScoring[0] },
+  $.post("/result", { bestCareer : highestScoring[0], activity: GetURLParameter("act")},
     function(data) {
-      alert("You might like " + data + "!");
+        window.location.replace('/result');
+        //window.location.href ='/result';
     });
 }
 

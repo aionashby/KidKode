@@ -119,17 +119,23 @@ function displayResults(testQuestions) {
     }
     questionNumber++;
   }
-  // create a variable to store the HTML output and add results from hashmap into output
-  const output = [];
-  function createHTMLElements(value, key, resultTracker) {
-    output.push(
-      `<h2> ${key} </h2>
-          <h3> ${value} </h3>`
-    );
+  // get the highest scoring career category (we'll update this so that we send
+  // the result to the server and show the appropriate results page)
+  const iter = resultTracker.entries();
+  var highestScoring = iter.next().value;
+  function getBestCareer(value, key, resultTracker) {
+    if (value > highestScoring[1]) {
+      highestScoring = [key, value];
+    }
   }
-  resultTracker.forEach(createHTMLElements);
-  // show total points for each category in hashmap
-  resultsContainer.innerHTML = output.join("");
+  resultTracker.forEach(getBestCareer);
+
+  // send name of career to server
+  $.post("/result", { bestCareer : highestScoring[0], activity: GetURLParameter("act")},
+    function(data) {
+        window.location.replace('/result');
+        //window.location.href ='/result';
+    });
 }
 
 ///////////////
