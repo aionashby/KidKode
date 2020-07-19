@@ -1,0 +1,224 @@
+{ 
+    "step0":{
+  		"question": "When a computer or phone is not working, do you like to try fixing it (like turning it off and on again, unplugging and plugging it back in, resetting apps) ?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Ethical Hacker", "Security Administrator", "Security Analyst", "Security Engineer"],
+  				"next": "step1"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Ethical Hacker", "Security Administrator", "Security Analyst", "Security Engineer"],
+  				"next": "step2"
+  			}
+  		},
+  		"previous": null
+  	},
+  	"step1": {
+  		"question": "Do you like working with others during group projects at school?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Security Administrator", "Security Analyst"],
+  				"next": "step3"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Bioinformatics Software Engineer", "Medical Software Engineer"],
+  				"next": "step4"
+  			}
+  		},
+  		"previous": "step0"
+  	},
+    "step2": {
+  		"question": "Do you like paying close attention to detail?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Bioinformatics Software Engineer", "Medical Software Engineer"],
+  				"next": "step5"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Computer Forensics Investigator", "Aerospace Software Engineer", "Bioinformatics Software Engineer", "Medical Software Engineer"],
+  				"next": "step6"
+  			}
+  		},
+  		"previous": "step0"
+  	},
+    "step3": {
+  		"question": "Are you curious about how apps and websites work to keep you safe behind the scenes?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Security Administrator"],
+  				"next": "step7"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Security Analyst","Security Administrator"],
+  				"next": "step8"
+  			}
+  		},
+  		"previous": "step1"
+  	},
+  	"step4": {
+  		"question": "When playing games with your friends, do you like to play offence or defence? Or when playing hide-and-go-seek do you like to be the hider or the seeker?",
+  		"answers": {
+  			"offence (seeker)": {
+  				"choice": "offence (seeker)",
+  				"points": ["Ethical Hacker","Security Analyst"],
+  				"next": "step9"
+  			},
+  			"defence (hider)": {
+  				"choice": "defence (hider)",
+  				"points": ["Security Engineer"],
+  				"next": "step10"
+  			}
+  		},
+  		"previous": "step1"
+  	},
+  	"step5": {
+  		"question": "Do you like to break things or take things apart (like legos)?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Ethical Hacker"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Security Administrator","Ethical Hacker"],
+  				"next": "step12"
+  			}
+  		},
+  		"previous": "step2"
+  	},
+  	"step6": {
+  		"question": "Are you curious about how apps and websites work to keep you safe behind the scenes?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Security Administrator"], 
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Security Analyst", "Security Engineer"],
+  				"next": "step14"
+  			}
+  		},
+  		"step": "step2"
+  	},
+  	"step7": {
+  		"question": "Do you like solving problems or puzzles?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Security Administrator"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": [],
+  				"next": "step16"
+  			}
+  		},
+  		"previous": "step3"
+
+  	},
+    "step8": {
+  		"question": "When playing games with your friends, do you like to play offence or defence? Or when playing hide-and-go-seek do you like to be the hider or the seeker?",
+  		"answers": {
+  			"offence (seeker)": {
+  				"choice": "offence (seeker)",
+  				"points": ["Security Analyst"],
+  				"next": "step9"
+  			},
+  			"defence (hider)": {
+  				"choice": "defence (hider)",
+  				"points": ["Security Administrator"],
+  				"next": "step10"
+  			}
+  		},
+  		"previous": "step3"
+
+  	},
+     "step9": {
+  		"question": "Do you like to break things or take things apart (like legos)?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Ethical Hacker"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Security Analyst"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step4"
+
+  	},
+    "step10": {
+  		"question": "Do you ever think about how scientists make discoveries that could lead to new medications and treatments?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Bioinformatics Software Engineer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Medical Software Engineer"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step4"
+
+  	},
+    "step11": {
+      	"question": null,
+  		"answers": null,
+  		"previous": null
+    },
+    "step12": {
+  		"question": "Are you curious about how apps and websites work to keep you safe behind the scenes?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Security Administrator"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Ethical Hacker"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step5"
+  	},
+    "step13": {
+  		"question": null,
+  		"answers": null,
+  		"previous": null
+  	},
+    "step14": {
+  		"question": "When playing games with your friends, do you like to play offence or defence? Or when playing hide-and-go-seek do you like to be the hider or the seeker?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Security Analyst"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Securiy Engineer"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step6"
+  	}
+}

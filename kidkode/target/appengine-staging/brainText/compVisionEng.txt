@@ -1,0 +1,6 @@
+Computer Vision Engineering
+A computer vision engineer often applies computer vision research that is based on a large sum of data to solve real-world problems. They spend much of their time researching and implementing machine learning primitives and computer vision for their client companies. They work closely with other personnel to facilitate the implementation of novel embedded architectures. Computer vision engineers have a significant amount of experience with a variety of systems, such as image recognition, machine learning and segmentation.
+https://connected-robotics.com/wp-content/uploads/2019/09/computer-vision-machine-learning-1024x630-740x455.jpg 
+https://www.mathplayground.com/logic_red_block_returns_2.html
+https://www.mathplayground.com/logic_laser_trap.html
+https://www.mathplayground.com/logic_maze_collapse_3.html
