@@ -1,6 +1,0 @@
-Software Engineering
-A software engineer applies mathematical analysis and the principles of computer science in order to design and develop computer software. There are many types of software that a software engineer can develop, such as operating systems, computer games, middleware, business applications and network control systems.
-https://www.glassdoor.com/blog/app/uploads/sites/2/Software-Architect-750x370.jpg 
-https://www.webgamesonline.com/mastermind/
-https://www.webgamesonline.com/towers-of-hanoi/
-https://www.webgamesonline.com/minesweeper/

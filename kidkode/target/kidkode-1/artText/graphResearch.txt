@@ -1,6 +1,0 @@
-Computer graphics researchers try to find ways to visualize and experience 3-d worlds. Using their knowledge of math and computer science they tackle problems in the computer graphics field like making people, colors, textures and shapes look as real as possible! If you want to work with other scientists to bring the latest advancements in  3-d technology to the world, being a Graphics researcher might be for you!
-http://graphics.berkeley.edu/papers/Bailey-FDD-2018-08/thumb.png
-http://www.alice.org/about/
-https://scratch.mit.edu
-https://kids.kiddle.co/Computer_graphics
-https://www.nctm.org/Classroom-Resources/Illuminations/Interactives/Geometric-Solids/
