@@ -5,6 +5,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
  
 public class ReadFile {
+    private String citation;
     private String path;
     private String title;
     private String description;
@@ -32,6 +33,9 @@ public class ReadFile {
     public ArrayList<String> getLinks() {
         return this.links;
     }
+    public String getCitation() {
+        return this.citation;
+    }
 
     private void setFileOutput(String path) {
         this.links = new ArrayList<String>();
@@ -39,11 +43,20 @@ public class ReadFile {
 
         try {
             scan = new Scanner(new File(path), "UTF-8");
+            String firstLine = scan.nextLine();
+            if (firstLine.startsWith("http")) {
+                this.citation = firstLine;
+                this.title = scan.nextLine();
+                this.description = scan.nextLine();        
+                this.mainImagePath = scan.nextLine();  
+            }
+            else {
+                this.title = firstLine; 
+                this.description = scan.nextLine();        
+                this.mainImagePath = scan.nextLine(); 
+                this.citation = null;    
 
-            this.title = scan.nextLine();
-            this.description = scan.nextLine();        
-            this.mainImagePath = scan.nextLine();            
-
+            }              
             String currentLink = "";
             int i = 0; 
             while (scan.hasNext() && ((currentLink = scan.nextLine()) != null)) {
