@@ -86,6 +86,13 @@ function buildQuiz(testQuestions) {
     );
     questionNumber++;
   }
+  // add an 'end of quiz' slide
+  output.push(
+    `<div class="slide" id="end-slide">
+        <h1> You've reached the end of the quiz! </h1>
+        <h2> You can see your results or go back to change your answers. </h2>
+      </div>`
+  );
   // finally combine our output list into one string of HTML and put it on the page
   quizContainer.innerHTML = output.join("");
   $("body").css("visibility", "visible");
@@ -160,6 +167,7 @@ let jsonFile = "quizSteps/" + GetURLParameter("act") + ".json"; // HARDCODED: to
 $( window ).on( "load", function() {
     startQuiz(); 
 });
+
 ////////////////
 // PAGINATION //
 ////////////////
@@ -168,18 +176,21 @@ $( window ).on( "load", function() {
  * on which slide is active and which aren't.
  */
 function showSlide(newStep, move) {
+  // remove the end of quiz slide or current slide as active slide
+  document.getElementById("end-slide").classList.remove("active-slide");
   var toRemove = document.getElementById(currentStep);
+  toRemove.classList.remove("active-slide");
+  // if not at the end of quiz
   if (newStep != null) {
-    // remove current slide as active slide
-    toRemove.classList.remove("active-slide");
     // assign new slide as active slide
     var newSlide = document.getElementById(newStep);
     newSlide.classList.add("active-slide");
     // update the current step
     currentStep = newStep;
   } else {
-    // if the user reached the end of the quiz
-    toRemove.classList.remove("active-slide");
+    // if the user reached the end of the quiz, remove current slide and show end of quiz slide
+    var endSlide = document.getElementById("end-slide");
+    endSlide.classList.add("active-slide");
   }
   if ((move === null || move === "previous") && newStep === "step0") {
     // if new slide is the first slide
