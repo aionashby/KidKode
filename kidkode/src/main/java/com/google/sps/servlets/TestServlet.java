@@ -27,11 +27,11 @@ public class TestServlet extends HttpServlet {
         fileMappings.put("Interaction Design", "intDes");
         fileMappings.put("Video Game Technical Art", "VGTA");
         fileMappings.put("Virtual Reality", "VR");
-        fileMappings.put("Web Development", "VR");
+        fileMappings.put("Web Development", "webDev");
        
         //brain texts
-        fileMappings.put("Computer Vision Engineer", "VGTA");
-        fileMappings.put("Data Scientist", "dataScientist.txt");
+        fileMappings.put("Computer Vision Engineer", "compVisionEng");
+        fileMappings.put("Data Scientist", "dataScientist");
         fileMappings.put("Deep Learning Research Engineer", "deepLearnResEng");
         fileMappings.put("Machine Learning Engineer", "machLearnEng");
 
@@ -76,7 +76,7 @@ public class TestServlet extends HttpServlet {
         fileMappings.put("Health Informatics", "healthInfo");
         fileMappings.put("Health information Management", "healthInfoMang");
         fileMappings.put("Medical Software Engineer", "medicalSoftEng");//+
-        fileMappings.put("Systems Engineer", "nurseInfo");//+
+        fileMappings.put("Nursing Informatics", "nurseInfo");//+
  
         //teaching text
         fileMappings.put("Computer Support Specialist", "compSuppSpec");//?
