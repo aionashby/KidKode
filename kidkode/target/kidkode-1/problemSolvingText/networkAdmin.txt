@@ -1,7 +1,8 @@
 https://www.rasmussen.edu/degrees/technology/blog/what-does-a-network-administrator-do/
 Network Administration
-A network administrator is responsible for keeping an organization’s computer network up-to-date and operating as intended. Any company or organization that uses multiple computers or software platforms needs a network admin to coordinate and connect the different systems.
+A network administrator (admin) is responsible for keeping an organization’s computer network up-to-date and working well. Any company or organization that uses multiple computers needs a network admin to connect the different systems.
 https://cdn.lynda.com/static/landing/images/hero/Network_Administrator_1200x630-1503613440008.jpg 
+https://kids.kiddle.co/Computer_network
 http://www.thekidzpage.com/freekidsgames/games/sudoku/sudoku-01.html
 https://www.webgamesonline.com/tetris/
 https://www.webgamesonline.com/4-in-a-line/

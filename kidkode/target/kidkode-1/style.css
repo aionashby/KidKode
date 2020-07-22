@@ -1,11 +1,13 @@
 /* Headings & Body Text */
+
+/*title*/
 h1 {
   color: #00C5A4;
   font-family: proxima-soft, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 55px;
-  margin: 120px 0px 0px 0px;
+  font-size: 5em;
+  margin: 60px 0px 30px 0px;
   padding: 10px;
 }
 
@@ -35,7 +37,7 @@ body {
   margin: 0;
   text-align: center; 
   background-image: url("/croppedBg2.svg");
-  background-size: cover;
+  background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
 
@@ -76,6 +78,7 @@ body {
 /* Dropdown Form: Label */
 label {
   color: #00C5A4;
+  display: block;
   font-family: proxima-soft, sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -85,9 +88,10 @@ label {
 
 /* Dropdown Form: Submit Button */
 input[type=submit] {
-  background-color: #00C5A4;
+  background-color: #5743EE;
+  /* #00C5A4;*/
   border: none;
-  border-bottom: 9px solid #00937A;
+  border-bottom: 9px solid #3524B4;/*#00937A;*/
   border-radius: 17px;
   color: white;
   cursor: pointer;
@@ -101,8 +105,8 @@ input[type=submit] {
 }
 
 input[type=submit]:hover { 
-  background-color:rgb(0, 173, 144);
-  border-color: rgb(0, 127, 106);
+  background-color: rgb(58, 44, 168);/*rgb(0, 173, 144);*/
+  border-color:  rgb(45, 33, 137);/*rgb(0, 127, 106);*/
 }
 
 input[type=submit]:active {

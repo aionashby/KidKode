@@ -1,6 +1,8 @@
+https://learn.org/articles/Network_Designer_Frequently_Asked_Career_and_Salary_Questions.html
 Network Design
-Network designers assess a company's network requirements and design a network to meet those needs. They design and submit plans for the network to management. Designers make any updates and upgrades to software and hardware needed.
+Network designers look at what kind of network (the way computers connect) a company needs and then design and submit plans for the network to the people in charge. Designers make updates and upgrades to the networks when needed.
 https://www.valmet.com/globalassets/automation/distributed-control-systems/valmet-dna-products/engineering-and-maintenance/dna-network-designer.jpg 
+https://kids.kiddle.co/Computer_network
 https://www.webgamesonline.com/mastermind/
 https://www.webgamesonline.com/towers-of-hanoi/
 https://www.webgamesonline.com/lines/
