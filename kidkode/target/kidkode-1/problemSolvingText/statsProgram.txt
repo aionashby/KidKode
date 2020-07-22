@@ -1,7 +1,8 @@
 https://www.chegg.com/career-center/explore/statistical-programmer
 Statistical Programmer
-Statistical Programmers create computer programs to do the job. They work from a database of information, some examples including a hospital database, a catalogue of insurance claims, a national survey, or clinical medication trials.
+Statistical programmers create computer programs, which are  a list of instructions that tell the computer what to do. They work from a database (a large collection) of information, such as a hospital database or large surveys or test results.
 https://www.simulstat.com/wp-content/uploads/bigstock-Business-man-working-with-lapt-42571708.jpg 
-http://www.thekidzpage.com/freekidsgames/games/sudoku/sudoku-01.html
+https://scratch.mit.edu/
+https://www.mathgames.com/stats
 https://www.webgamesonline.com/towers-of-hanoi/
 https://www.webgamesonline.com/minesweeper/

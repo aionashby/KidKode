@@ -1,7 +1,8 @@
 https://www.fieldengineer.com/skills/what-is-a-network-architect
 Network Architecture
-A network architect is a professional who takes care of communication networks. They play a crucial role in creating, maintaining and modifying an IP network’s hardware, software and virtualized components.
+A network architect is a professional who takes care of communication networks (the way computers connect). They are very important because they create, take care of, and make changes to the ways computers connect!
 https://www.ruleeducation.net/wp-content/uploads/2019/12/computer-network-architect.jpg 
+https://kids.kiddle.co/Computer_network
 https://www.webgamesonline.com/tetris/
 https://www.webgamesonline.com/4-in-a-line/
 https://www.webgamesonline.com/guess-the-phrase/

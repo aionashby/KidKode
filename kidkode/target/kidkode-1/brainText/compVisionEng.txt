@@ -1,7 +1,8 @@
 https://study.com/articles/computer_vision_engineer_job_description_salary.html
 Computer Vision Engineering
-A computer vision engineer often applies computer vision research that is based on a bunch of data (information) to solve real-world problems! They spend much of their time researching and implementing machine learning principles and computer vision for the companies they are working for. They work closely with other people to develop embedded architectures (technology with both hardware and software that serves a certain purpose within a bigger piece of technology). Computer vision engineers gain experience with a variety of systems, such as image recognition and machine learning!
+A computer vision engineer often uses computer vision research that is based on a bunch of data (information) to solve real-world problems! They spend much of their time researching and using machine learning (figuring out how to make computers "learn" like humans) and computer vision to make technology for the companies they work for. They work closely with other people to develop embedded architectures, which are technology with both hardware (the things you can see/touch) and software (a list of intructions that tells the computer what to do) that serves a certain purpose within a bigger piece of technology. Computer vision engineers work with many different systems, such as image recognition (getting the computer to realize what a picture is) and machine learning!
 https://connected-robotics.com/wp-content/uploads/2019/09/computer-vision-machine-learning-1024x630-740x455.jpg 
+https://kids.kiddle.co/Computer_vision
 https://www.mathplayground.com/logic_red_block_returns_2.html
 https://www.mathplayground.com/logic_laser_trap.html
 https://www.mathplayground.com/logic_maze_collapse_3.html

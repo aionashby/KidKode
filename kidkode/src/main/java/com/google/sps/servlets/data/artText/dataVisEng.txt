@@ -1,5 +1,6 @@
+https://www.elderresearch.com/company/careers/data-visualization-engineer#:~:text=A%20data%20visualization%20engineer%20works,interactive%2C%20web%2Dbased%20format.&text=for%20data%20visualization.
 Data Visualization Engineer
-Data visualization engineers work collaboratively with data scientists, business consultants, and other software engineers to create data visualizations (a graphic representation of data) in an interactive, usually web-based format. Data visualization engineers have to understand principles of design so that it is easy for users to understand the data their graphics represent.
+Data visualization engineers work together with data scientists, business consultants, and other software engineers (people that make things like apps) to create data visualizations (a nice way of presenting data) in an interactive, usually web-based format! Data visualization engineers have to understand principles of design so that it is easy for users to understand the data their graphics represent.
 https://cdn.dribbble.com/users/2401245/screenshots/5557634/data_viz__recovered__4x.png?compress=1&resize=1200x900
 https://iafisher.com/projects/cities/usa
 http://www.hexinvaders.com/ 

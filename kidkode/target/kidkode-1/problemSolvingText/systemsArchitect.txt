@@ -1,7 +1,8 @@
 https://www.careerexplorer.com/careers/systems-architect/#:~:text=A%20systems%20architect%20is%20a,order%20to%20fulfill%20certain%20requirements.
 Systems Architecture
-A systems architect is a technology professional who develops and implements computer systems and networks for an organization. They define the architecture of a system in order to fulfill certain requirements.
+A systems architect is a person who creates computer systems (the things needed to let a user work with a computer) and networks (the way computers connect) for a company. They have to make sure their designs fix the problems that companies need help with.
 https://rachelkirkton.files.wordpress.com/2016/04/lyhuth.jpg?w=656 
+https://kids.kiddle.co/Computer_network
 https://www.webgamesonline.com/tetris/
 https://www.webgamesonline.com/backgammon/
 https://www.webgamesonline.com/lines/

@@ -1,7 +1,7 @@
 https://searchnetworking.techtarget.com/definition/network-engineer
 Network Engineering
-A network engineer is a technology professional who has the necessary skills to plan, implement and oversee the computer networks that support in-house voice, data, video and wireless network services.
+A network engineer is a technology professional who has the skills to plan, create and take care of the computer networks (the way computers connect). Networks are important because they let us send information and talk to other people with computers!
 https://cdn.business2community.com/wp-content/uploads/2018/08/Cost-to-Hire-a-Network-Engineer-feature.jpg 
+https://kids.kiddle.co/Computer_network
 https://www.webgamesonline.com/towers-of-hanoi/
 https://www.webgamesonline.com/arrange-numbers/
-https://www.webgamesonline.com/minesweeper/

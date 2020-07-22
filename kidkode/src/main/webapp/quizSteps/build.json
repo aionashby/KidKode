@@ -227,7 +227,7 @@
   		"previous": "step6"
   	},
     "step14": {
-  		"question": "Would you like to learn more about what goes in to making things like headphons and GPS?",
+  		"question": "Would you like to learn more about what goes in to making things like headphones and GPS?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
