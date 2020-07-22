@@ -79,7 +79,7 @@ label {
   font-family: proxima-soft, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 23px;
+  font-size: 2.5em;
   padding: 10px;
 }
 
@@ -88,14 +88,14 @@ label {
   font-family: proxima-soft, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 50px;
+  font-size: 3.5em;
   line-height: 1.15em;
   margin: 30px 0px 0px 0px;
   padding: 10px;
 }
 
 .answers {
-  margin-bottom: 20px;
+  margin: 12vh auto;
   text-align: left;
   display: inline-block;
 }
@@ -114,7 +114,6 @@ label {
   font-family: proxima-soft, sans-serif;
   font-weight: 700;
   font-style: normal;
-  margin: 25px;
   padding: 16px 32px;
   text-decoration: none;
   position: relative;
@@ -130,6 +129,12 @@ label {
   border-width: 3px;
   position: relative;
   top: 5px;
+}
+#next {
+  margin: 6% 3% 3% 15%;
+}
+#previous {
+  margin: 6% 15% 3% 3%;
 }
 
 .slide {
@@ -149,5 +154,24 @@ label {
 
 #quiz-container {
   position: relative;
-  height: 35vh;
+  height: 50vh;
+}
+
+@media only screen and (max-width: 1300px) {
+  #next {
+    margin: 6% 3% 3% 15%;
+ }
+  #previous {
+    margin: 6% 15% 3% 3%;
+  }
+  .answers {
+    margin: 7vh auto;
+  }
+  .answers label {
+    margin: 2vh;
+    font-size: 2em;
+  }
+  #quiz-container {
+   height: 35vh;
+ } 
 }
