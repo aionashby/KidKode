@@ -1,12 +1,13 @@
 /* Headings & Body Text */
 h1 {
-  color: #00C5A4;
+  color: #5743EE;
   font-family: proxima-soft, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 55px;
-  margin: 120px 0px 0px 0px;
-  padding: 10px;
+  margin-top: 8vh;
+  margin-bottom: 1vh;
+  padding: 1vh;
 }
 
 h2 {
@@ -38,12 +39,51 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+div.gallery img {
+  width: 100%;
+  height: 400px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 /* Navigation Bar */
 .navbar {
   background-color: #00C5A4;
   list-style: none;
   margin: 0 auto;
+  padding: 0; 
   text-align: center;
 }
 

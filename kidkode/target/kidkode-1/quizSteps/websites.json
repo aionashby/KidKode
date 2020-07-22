@@ -16,7 +16,7 @@
   		"previous": null
   	},
   	"step1": {
-  		"question": "Do you enjoy working behind the scenes?",
+  		"question": "Do you enjoy working on the parts of a group project that other people might not even see?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
@@ -64,7 +64,7 @@
   		"previous": "step1"
   	},
   	"step4": {
-  		"question": "Do you enjoy making sure that things are working properly?",
+  		"question": "Do you enjoy making sure that things are working properly (like testing out things you built or checking math problems)?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
