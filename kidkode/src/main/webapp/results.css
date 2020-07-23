@@ -40,7 +40,7 @@ body {
 }
 
 .title { 
-    color: rgb(0, 118, 99);
+    color: #BC8500;
     transition-duration: 0.3s;
    /* #00C5A4;*/
     font-weight: bolder;
@@ -99,5 +99,17 @@ img {
     padding: 2%;
     width: 50%;
     margin: 0 auto;
+    
+}
+.citationBlock{
+    bottom: 0; 
+    padding-top: 2%;
+    padding-bottom: 1%;
+    font-size: .8em;
+    color: whitesmoke; 
+    text-align: center; 
+    background-color: rgb(63, 63, 63);
+    margin: 0 auto;
+    margin-top: 10vh;
 }
    

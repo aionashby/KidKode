@@ -25,7 +25,6 @@
     <h1 class="title"><c:out value="${text.title}" /></h1>
     <p><img src=${text.mainImagePath}></img></p>
     <p class="description"><c:out value="${text.description}" /></p>
-    
     <div class = "centerLinks">
     <h3>Check out some cool websites and games related to your interests below:</h3>
         <ul>
@@ -33,6 +32,12 @@
             <li><a href=<c:out value="${link}"/>><c:out value="${link}"/></a></li>
         </c:forEach> 
         <ul> 
-    <div>
+    </div>
+    <div class = "citationBlock">
+        <c:if test="${not empty text.citation}">
+            <div class="cite"> text adapted from: <c:out value="${text.citation}"/></div>
+        </c:if>
+            <div class="cite"> image from: <c:out value="${text.mainImagePath}"/></div>
+    </div>
 </body>
 </html
