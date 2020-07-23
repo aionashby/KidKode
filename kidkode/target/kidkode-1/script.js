@@ -195,6 +195,7 @@ function showSlide(newStep, move) {
   if ((move === null || move === "previous") && newStep === "step0") {
     // if new slide is the first slide
     previousButton.style.display = "none";
+    nextButton.style.marginLeft = "3%";
     nextButton.style.display = "inline-block";
     submitButton.style.display = "none";
   } else if (move === "next" && newStep === null) {
@@ -205,6 +206,7 @@ function showSlide(newStep, move) {
   } else {
     // if new slide is any slide in between
     previousButton.style.display = "inline-block";
+    nextButton.style.marginLeft = "15%";
     nextButton.style.display = "inline-block";
     submitButton.style.display = "none";
   }

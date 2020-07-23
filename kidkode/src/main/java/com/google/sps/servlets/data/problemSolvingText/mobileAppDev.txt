@@ -1,7 +1,0 @@
-https://www.itcareerfinder.com/it-careers/mobile-application-developer.html
-Mobile Application Development
-Mobile application developers create software for mobile devices. Mobile developers write programs (code that tells the phone what to do) using the Objective C, C++, C# or Java programming languages. A mobile app developer chooses the operating system (a.k.a. mobile platform) they will develop for, such as Google's Android or Apple's iOS, then learns the programming languages for that platform so they can create apps!
-https://appinventor.mit.edu/
-https://scratch.mit.edu/
-https://www.webgamesonline.com/towers-of-hanoi/
-

@@ -1,26 +1,26 @@
 /* Headings & Body Text */
 h1 {
-  color: #00C5A4;
+  color: #000000;;
   font-family: proxima-soft, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 55px;
-  margin: 120px 0px 0px 0px;
+  margin-top: 5vh;
   padding: 10px;
 }
 
 h2 {
-  color: #000000;
+  color: #BC8500;
   font-family: proxima-soft, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 30px;
-  margin: 0;
+  margin: 1vh;
   padding: 10px;
 }
 
 h3 {
-  color: #999999;
+  color: #000000;
   font-family: proxima-soft, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -44,6 +44,7 @@ body {
   background-color: #00C5A4;
   list-style: none;
   margin: 0 auto;
+  padding: 0; 
   text-align: center;
 }
 
@@ -71,4 +72,9 @@ body {
 
 .navbar a.active {
   color: #002C25;
+}
+@media only screen and (max-width: 1300px) {
+  body{
+    background-size: 100vw 100vh;
+  }
 }

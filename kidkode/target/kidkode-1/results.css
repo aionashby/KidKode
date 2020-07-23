@@ -6,11 +6,11 @@ body {
 
 /* Navigation Bar */
 .navbar {
-    background-color: #00C5A4;
-    width: 100%;
-    list-style: none;
-    margin: 0 auto;
-    text-align: center;
+  background-color: #00C5A4;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0; 
+  text-align: center;
 }
 
 .navbar li {
@@ -96,7 +96,8 @@ img {
 }
 
 .centerLinks{
-    width:50%;
+    padding: 2%;
+    width: 50%;
     margin: 0 auto;
 }
    
