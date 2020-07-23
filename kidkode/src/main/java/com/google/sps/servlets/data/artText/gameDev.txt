@@ -1,7 +1,0 @@
-Game Development
-Game Development is the process of making a video game. There are lots of roles and parts to game development. You first begin with an idea, concept or story for a game. After planning out how you want to build your game, you will code the logic of the game, create art to make it look nice, add sounds and music to it, and test it until you have a fully completed game!
-https://cdn-images-1.medium.com/max/2600/1*jMDG7pTIaVeP5bQnE1RuXg.png 
-https://codecombat.com/
-https://www.tynker.com/
-https://www.minecraft.net/en-us/
-https://gamestarmechanic.com/

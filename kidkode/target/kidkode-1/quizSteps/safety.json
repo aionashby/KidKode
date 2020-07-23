@@ -64,15 +64,15 @@
   		"previous": "step1"
   	},
   	"step4": {
-  		"question": "When playing games with your friends, do you like to play offence or defence? Or when playing hide-and-go-seek do you like to be the hider or the seeker?",
+  		"question": "When playing games with your friends, do you like to play offense or defense? Or when playing hide-and-go-seek do you like to be the hider or the seeker?",
   		"answers": {
   			"offence (seeker)": {
-  				"choice": "offence (seeker)",
+  				"choice": "offense (seeker)",
   				"points": ["Ethical Hacker","Security Analyst"],
   				"next": "step9"
   			},
   			"defence (hider)": {
-  				"choice": "defence (hider)",
+  				"choice": "defense (hider)",
   				"points": ["Security Engineer"],
   				"next": "step10"
   			}

@@ -1,13 +1,17 @@
 /* Headings & Body Text */
 h1 {
-  color: #5743EE;
+  color: #000000;
   font-family: proxima-soft, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 55px;
-  margin-top: 8vh;
+  margin-top: 4vh;
   margin-bottom: 1vh;
   padding: 1vh;
+}
+
+a {
+    color: #5743EE;
 }
 
 h2 {
@@ -27,7 +31,7 @@ h3 {
   font-style: normal;
   font-size: 25px;
   line-height: 32px;
-  margin: 0 auto 50px auto;
+  margin: 1vh auto 3vh auto;
   padding: 0;
   width: 700px;
 }
@@ -45,6 +49,7 @@ div.gallery img {
 }
 
 div.desc {
+  font-size: 1.5em;
   padding: 15px;
   text-align: center;
 }
@@ -115,6 +120,11 @@ div.desc {
 
 * {
   box-sizing: border-box;
+}
+@media only screen and (max-width: 1300px) {
+  .desc {
+    font-size: 1.5em;
+  }
 }
 
 

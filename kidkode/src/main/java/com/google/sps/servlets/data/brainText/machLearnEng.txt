@@ -1,9 +1,0 @@
-https://www.roberthalf.com/blog/the-future-of-work/how-to-become-a-machine-learning-engineer
-Machine Learning Engineering
-Machine learning engineers design self-running software (a set of instruction that tells a computer what to do) that is able to "learn" on its own ! Each time the software performs an operation, it uses those results to carry out future operations in an even better way! This is how the software, or machine, “learns.”
-https://www.gqrgm.com/wp-content/uploads/2018/10/How-To-Become-A-Machine-Learning-Engineer.jpg 
-https://kids.kiddle.co/Machine_learning
-https://www.ibm.org/activities/machine-learning-for-kids
-http://steamcurriculum.weebly.com/scratch-based-machine-learning.html
-https://scratch.mit.edu/
-https://www.mathplayground.com/probability.html
