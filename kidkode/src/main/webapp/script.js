@@ -5,7 +5,7 @@
  * Redirect the user back to the homepage.
  */
 function goHome() {
-    window.location.replace('/');
+    window.location.assign('/');
 }
 
 /*
