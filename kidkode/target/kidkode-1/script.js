@@ -104,30 +104,20 @@ function buildQuiz(testQuestions) {
  * hashmap, and increment the points for the corresponding careers in the hashmap.
  */
 function displayResults(testQuestions) {
-  // get all answer containers
-  const answerContainers = quizContainer.querySelectorAll(".answers");
-  // create empty hashmap for the user's results
   let resultTracker = new Map();
-  // for each question iterate through each carrer in points array...
-  var questionNumber = 0;
-  for (let [step, stepItems] of Object.entries(testQuestions)) {
-    const answerContainer = answerContainers[questionNumber];
-    const selector = `input[name=question${questionNumber}]:checked`;
-    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-    for (var option in stepItems.answers) {
-      if (userAnswer === stepItems.answers[option].choice) {
-        // ...and increment points for appropriate careers in hashmap
-        let pointsArr = stepItems.answers[option].points;
-        for (var j in pointsArr) {
-          let key = pointsArr[j];
-          resultTracker.set(key, getOrDefault(key, resultTracker) + 1);
-        }
+  userPath.forEach((element, index, array) => {
+    let stepNumber = Object.keys(element)[0];
+    let choice = Object.values(element)[0];
+    if (stepNumber != null && stepNumber != "null") {
+      let pointsArr = testQuestions[stepNumber]["answers"][choice]["points"];
+      console.log(pointsArr)
+      for (let j in pointsArr) {
+        let key = pointsArr[j];
+        resultTracker.set(key, getOrDefault(key, resultTracker) + 1);
       }
     }
-    questionNumber++;
-  }
-  // get the highest scoring career category (we'll update this so that we send
-  // the result to the server and show the appropriate results page)
+  });
+  //get highest scoring career
   const iter = resultTracker.entries();
   var highestScoring = iter.next().value;
   function getBestCareer(value, key, resultTracker) {
@@ -137,9 +127,10 @@ function displayResults(testQuestions) {
   }
   resultTracker.forEach(getBestCareer);
 
-  // send name of career to server
+  // send name of career to server and clear their saved path
   $.post("/result", { bestCareer : highestScoring[0], activity: GetURLParameter("act")},
     function(data) {
+        sessionStorage.clear();
         window.location.replace('/result');
         //window.location.href ='/result';
     });
@@ -156,16 +147,26 @@ const previousButton = document.getElementById("previous");
 const nextButton = document.getElementById("next");
 
 // Variables
-let currentStep = "step0"; // the step we are currently on
-var userPath = ["step0"]; // this array keeps track of the user's pathway
+let currentStep = ""; // the step we are currently on
+var userPath = []; // this array keeps track of the user's pathway, we'll be saving it in session storage so they can pick up after reloading
 var stepQuestionNumbers = new Map(); // map that keeps track of the steps and corresponsing question number
-let jsonFile = "quizSteps/" + GetURLParameter("act") + ".json"; // HARDCODED: to be changed depending on the user's favorite activity
+let jsonFile = "quizSteps/" + GetURLParameter("act") + ".json"; // to be changes depending on the user's favorite activity
 
 ////////////////
 // START QUIZ //
 ////////////////
 $( window ).on( "load", function() {
-    startQuiz(); 
+  //if user has opened a new tab/starting quiz for first time 
+  if (sessionStorage.getItem('savedPath') === null) {
+    currentStep = "step0"; // the step we are currently on
+    userPath = []; // this array keeps track of the user's pathway
+  } else {
+    //otherwise load the path saved for them from this session (before they refreshed tab)
+    userPath = JSON.parse(sessionStorage.getItem('savedPath'));
+    currentStep = (Object.keys(userPath[userPath.length - 1]))[0];  
+    console.log(currentStep);
+  }
+  startQuiz(); 
 });
 
 ////////////////
@@ -178,33 +179,41 @@ $( window ).on( "load", function() {
 function showSlide(newStep, move) {
   // remove the end of quiz slide or current slide as active slide
   document.getElementById("end-slide").classList.remove("active-slide");
-  var toRemove = document.getElementById(currentStep);
-  toRemove.classList.remove("active-slide");
+  // if current step is null, the user has reloaded while on the final quiz page
+  if (currentStep != "null") {
+       let toRemove = document.getElementById(currentStep);
+       toRemove.classList.remove("active-slide");
+  }
   // if not at the end of quiz
-  if (newStep != null) {
+  if ((newStep  != "null" && newStep  != null)) {
+      console.log(newStep);
     // assign new slide as active slide
     var newSlide = document.getElementById(newStep);
     newSlide.classList.add("active-slide");
     // update the current step
     currentStep = newStep;
   } else {
+    currentStep = "null";
     // if the user reached the end of the quiz, remove current slide and show end of quiz slide
     var endSlide = document.getElementById("end-slide");
     endSlide.classList.add("active-slide");
   }
   if ((move === null || move === "previous") && newStep === "step0") {
     // if new slide is the first slide
+    
     previousButton.style.display = "none";
     nextButton.style.marginLeft = "3%";
     nextButton.style.display = "inline-block";
     submitButton.style.display = "none";
-  } else if (move === "next" && newStep === null) {
+  } else if ((move === "next" && newStep === "null") || currentStep === "null") {
     // if new slide is the last slide
+    console.log("hello");
     previousButton.style.display = "inline-block";
     nextButton.style.display = "none";
     submitButton.style.display = "inline-block";
   } else {
     // if new slide is any slide in between
+    console.log("hello2");
     previousButton.style.display = "inline-block";
     nextButton.style.marginLeft = "15%";
     nextButton.style.display = "inline-block";
@@ -254,13 +263,19 @@ function getNext(testQuestions, currentStep, userChoice) {
 function showNextSlide() {
   // get the choice the user picked for this current question
   var userChoice = getChoice(currentStep);
+  userPath.push({[currentStep] : userChoice});
+
   if (userChoice != null) {
   //fetch JSON file to find out what the next question is, based on user choice. 
     fetch(jsonFile)
       .then(res => res.json())
       .then(output => {
         let newStep = getNext(output, currentStep, userChoice);
-        userPath.push(newStep);
+
+        if (newStep == null) {
+             userPath.push({[newStep] : null});
+        }
+        sessionStorage.setItem('savedPath', JSON.stringify(userPath));
         showSlide(newStep, "next");
       });
   }
@@ -277,8 +292,13 @@ function showPreviousSlide() {
   for (var i = 0; i < answerContainer.length; i++)
     answerContainer[i].checked = false;
   // access the last question and delete it from userPath array
+  if ((Object.keys(userPath[userPath.length - 1])[0]) === "null") {
+      userPath.pop();
+  }
+  showSlide((Object.keys(userPath[userPath.length - 1]))[0], "previous");
   userPath.pop();
-  showSlide(userPath[userPath.length - 1], "previous");
+  sessionStorage.setItem('savedPath', JSON.stringify(userPath));
+  
 }
 
 /////////////////////
