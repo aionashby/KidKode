@@ -110,7 +110,6 @@ function displayResults(testQuestions) {
     let choice = Object.values(element)[0];
     if (stepNumber != null && stepNumber != "null") {
       let pointsArr = testQuestions[stepNumber]["answers"][choice]["points"];
-      console.log(pointsArr)
       for (let j in pointsArr) {
         let key = pointsArr[j];
         resultTracker.set(key, getOrDefault(key, resultTracker) + 1);
@@ -185,7 +184,6 @@ function showSlide(newStep, move) {
   }
   // if not at the end of quiz
   if ((newStep  != "null" && newStep  != null)) {
-      console.log(newStep);
     // assign new slide as active slide
     var newSlide = document.getElementById(newStep);
     newSlide.classList.add("active-slide");
@@ -206,13 +204,11 @@ function showSlide(newStep, move) {
     submitButton.style.display = "none";
   } else if ((move === "next" && newStep === "null") || currentStep === "null") {
     // if new slide is the last slide
-    console.log("hello");
     previousButton.style.display = "inline-block";
     nextButton.style.display = "none";
     submitButton.style.display = "inline-block";
   } else {
     // if new slide is any slide in between
-    console.log("hello2");
     previousButton.style.display = "inline-block";
     nextButton.style.marginLeft = "15%";
     nextButton.style.display = "inline-block";
