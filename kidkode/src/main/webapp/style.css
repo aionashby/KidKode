@@ -87,6 +87,10 @@ label {
   padding: 10px;
 }
 
+#branchCodeMobile {
+  display: none;
+}
+
 /* Dropdown Form: Submit Button */
 input[type=submit] {
   background-color: #5743EE;
