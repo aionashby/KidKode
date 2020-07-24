@@ -2,6 +2,13 @@
 // FUNCTIONS //
 ///////////////
 /*
+ * Redirect the user back to the homepage.
+ */
+function goHome() {
+    window.location.replace('/');
+}
+
+/*
  * Parses the url query string to retrieve the value associated with the paramater passed in.
  * We'll use this to retrieve which JSON we should load based on the URL.
  */
@@ -154,6 +161,7 @@ const resultsContainer = document.getElementById("results");
 const submitButton = document.getElementById("submit");
 const previousButton = document.getElementById("previous");
 const nextButton = document.getElementById("next");
+const homeButton = document.getElementById("home");
 
 // Variables
 let currentStep = "step0"; // the step we are currently on
@@ -287,3 +295,4 @@ function showPreviousSlide() {
 submitButton.addEventListener("click", showResults);
 previousButton.addEventListener("click", showPreviousSlide);
 nextButton.addEventListener("click", showNextSlide);
+homeButton.addEventListener("click", goHome);
