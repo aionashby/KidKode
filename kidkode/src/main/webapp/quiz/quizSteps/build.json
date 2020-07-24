@@ -1,0 +1,246 @@
+{ 
+    "step0":{
+  		"question": "Is your favorite electronic device a computer?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Robotics Engineer", "Electronics Engineer", "Electrical Engineer", "Computer Hardware Engineer"],
+  				"next": "step1"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Robotics Engineer", "Electronics Engineer", "Electrical Engineer", "Computer Hardware Engineer"],
+  				"next": "step2"
+  			}
+  		},
+  		"previous": null
+  	},
+  	"step1": {
+  		"question": "Do the pieces inside electronics (wires and circuits) interest you?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Robotics Engineer", "Electronics Engineer", "Electrical Engineer", "Computer Hardware Engineer"],
+  				"next": "step3"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Robotics Engineer", "Electronics Engineer", "Electrical Engineer", "Computer Hardware Engineer"],
+  				"next": "step4"
+  			}
+  		},
+  		"previous": "step0"
+  	},
+    "step2": {
+  		"question": "Is your favorite electronic device your phone, tablet, video game console or TV?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Robotics Engineer", "Electronics Engineer", "Electrical Engineer", "Computer Hardware Engineer"],
+  				"next": "step5"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Robotics Engineer", "Electronics Engineer", "Electrical Engineer", "Computer Hardware Engineer"],
+  				"next": "step6"
+  			}
+  		},
+  		"previous": "step0"
+  	},
+  	"step3": {
+  		"question": "Have you ever wanted to build a computer or a piece of a computer (like a processor or CPU)?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Electrical Engineer", "Computer Hardware Engineer"],
+  				"next": "step7"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Robotics Engineer", "Electronics Engineer"],
+  				"next": "step8"
+  			}
+  		},
+  		"previous": "step1"
+  	},
+  	"step4": {
+  		"question": "Are you interested in learning more about how a computer works?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Electronics Engineer", "Computer Hardware Engineer"],
+  				"next": "step9"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Robotics Engineer", "Electrical Engineer"],
+  				"next": "step9"
+  			}
+  		},
+  		"previous": "step1"
+  	},
+  	"step5": {
+  		"question": "Have you ever wondered how much it costs to build an electronic device?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Electronics Engineer", "Electrical Engineer"], 
+  				"next": "step11"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Robotics Engineer","Computer Hardware Engineer"],
+  				"next": "step12"
+  			}
+  		},
+  		"previous": "step2"
+  	},
+  	"step6": {
+  		"question": "Have you ever wondered how a robot works?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Electronics Engineer", "Robotics Engineer"], 
+  				"next": "step13"
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Electrical Engineer","Computer Hardware Engineer"],
+  				"next": "step14"
+  			}
+  		},
+  		"step": "step2"
+  	},
+  	"step7": {
+  		"question": "Have you ever thought about what the inside of your computer looks like?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Computer Hardware Engineer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Electrical Engineer"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step3"
+
+  	},
+    "step8": {
+  		"question": "Are you interested in building a robot?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Robotics Engineer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Electronics Engineer"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step3"
+
+  	},
+     "step9": {
+  		"question": "Do you enjoy math?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points":["Electronics Engineer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Computer Hardware Engineer"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step4"
+
+  	},
+    "step10": {
+  		"question": "Have you ever wanted to build a robot?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Robotics Engineer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Electrical Engineer"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step4"
+  	},
+    "step11": {
+      	"question": "Do you enjoy math?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Electronic Engineer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Electrical Engineer"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step5"
+    },
+    "step12": {
+  		"question": "Are you interested in building a robot?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Robotics Engineer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Computer Hardware Engineer"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step5"
+  	},
+    "step13": {
+  		"question": "Are you interested in building a robot?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Robotics Engineer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Electrical Engineer"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step6"
+  	},
+    "step14": {
+  		"question": "Would you like to learn more about what goes in to making things like headphones and GPS?",
+  		"answers": {
+  			"yes": {
+  				"choice": "yes",
+  				"points": ["Electronic Engineer"],
+  				"next": null
+  			},
+  			"no": {
+  				"choice": "no",
+  				"points": ["Computer Hardware Engineer"],
+  				"next": null
+  			}
+  		},
+  		"previous": "step6"
+  	}
+
+}

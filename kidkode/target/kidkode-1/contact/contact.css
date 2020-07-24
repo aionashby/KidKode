@@ -122,7 +122,9 @@ div.desc {
   box-sizing: border-box;
 }
 
-
+img {
+    border-radius: 15px;
+}
 
 
 

@@ -31,24 +31,8 @@
   		},
   		"previous": "step0"
   	},
-  	"step2": {
-  		"question": null,
-  		"answers": {
-  			"yes": {
-  				"choice": null,
-  				"points": [],
-  				"next": null
-  			},
-  			"no": {
-  				"choice": null,
-  				"points": [],
-  				"next": null
-  			}
-  		},
-  		"previous": null
-  	},
   	"step3": {
-  		"question": "Are you interested in business?",
+  		"question": "Are you interested in business or how companies work?",
   		"answers": {
   			"yes": {
   				"choice": "yes",
