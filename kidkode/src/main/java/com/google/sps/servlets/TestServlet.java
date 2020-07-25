@@ -50,7 +50,7 @@ public class TestServlet extends HttpServlet {
         fileMappings.put("Game Production", "gameProduction");
         fileMappings.put("Game Programming", "gameProgramming");
         fileMappings.put("Game Tester", "gameTester");
-        fileMappings.put("IT Operations Analyst","OperationsAnalyst"); 
+        fileMappings.put("IT Operations Analyst","itOperationsAnalyst"); 
         fileMappings.put("Mobile App Development", "mobileAppDev");
         fileMappings.put("Network Administrator", "networkAdmin");
         fileMappings.put("Network Architecture", "networkArchitect");
