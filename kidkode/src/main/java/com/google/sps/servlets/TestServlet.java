@@ -50,7 +50,7 @@ public class TestServlet extends HttpServlet {
         fileMappings.put("Game Production", "gameProduction");
         fileMappings.put("Game Programming", "gameProgramming");
         fileMappings.put("Game Tester", "gameTester");
-        fileMappings.put("IT Operations Analyst","ITOperationsAnalyst"); 
+        fileMappings.put("IT Operations Analyst","OperationsAnalyst"); 
         fileMappings.put("Mobile App Development", "mobileAppDev");
         fileMappings.put("Network Administrator", "networkAdmin");
         fileMappings.put("Network Architecture", "networkArchitect");
@@ -68,7 +68,7 @@ public class TestServlet extends HttpServlet {
         fileMappings.put("Systems Engineer", "systemsEng");
 
         //safety text
-        fileMappings.put("Ethical Hacker", "ethHacker");
+        fileMappings.put("Ethical Hacker", "ethicHacker");
         fileMappings.put("Security Administrator", "securAdmin");
         fileMappings.put("Security Analyst", "securAnalyst");
         fileMappings.put("Security Engineer", "secureEng");
