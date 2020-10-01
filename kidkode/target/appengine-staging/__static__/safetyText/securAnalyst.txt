@@ -1,5 +1,6 @@
-Security Analyst
-Security analysts monitor computer systems and networks for security violations. They investigate security breaches and prepare reports about any damage or continued threats. Security analysts contribute to the development of an organization's security standards and policies.
+https://www.cyberdegrees.org/jobs/security-analyst/
+Being a Security Analyst
+Security analysts monitor computer systems and networks for security attacks. They investigate security weaknesses and prepare reports about any damage or continued threats. Security analysts help develop a company's security standards and policies.
 https://miro.medium.com/max/400/1*uo2F6dFu2IPJVTP4aXjX5w.jpeg 
 http://targetedattacks.trendmicro.com/cyoa/en/
 https://www.pbs.org/wgbh/nova/labs/lab/cyber/

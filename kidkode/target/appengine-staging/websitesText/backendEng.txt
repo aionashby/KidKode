@@ -1,5 +1,6 @@
+https://www.glassdoor.com/Job-Descriptions/Back-End-Engineer.htm
 Back-End Engineering
-A Back End Engineer is responsible for curating the structure of server side information. Back Side Engineers primarily write server scripts and API's to be utilized by front side engineers and UX designers. The day to day consist of optimizing servers for speed and stability, implementing security structures, generating reusable code libraries and generating data storage solutions.
+A Back-end Engineer is responsible for creating the structure of the information used behind the scenes of an app or website. Back-end Engineers primarily write code to be used by front-end engineers and UX designers. Their day to day work consists of improving speed and stability, creating security structures, writing reusable code libraries and generating data storage solutions.
 https://res.cloudinary.com/relayto/image/upload/w_1440,q_95,f_auto/images_originals/QGjn5dJT5eh6tYx5qAvh_Code.png 
 https://www.roblox.com/Login
 https://appinventor.mit.edu/

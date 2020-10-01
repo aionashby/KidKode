@@ -56,7 +56,7 @@
         <version>2.2.0</version>
         <configuration>
           <!-- TODO: set project ID. -->
-          <deploy.projectId>summer20-sps-23</deploy.projectId>
+          <deploy.projectId>kid-kode</deploy.projectId>
           <deploy.version>1</deploy.version>
         </configuration>
       </plugin>

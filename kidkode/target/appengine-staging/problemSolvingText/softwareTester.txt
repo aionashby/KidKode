@@ -1,3 +1,4 @@
+https://www.prospects.ac.uk/job-profiles/software-tester
 Software Testing
 Software testers are involved in the quality assurance stage of software development and deployment. They conduct automated and manual tests to ensure the software created by developers is fit for purpose and any bugs or issues are removed within a product before it gets deployed to everyday users.
 https://miro.medium.com/max/1000/1*sllYRUilK-ueEikFP98XhQ.jpeg 

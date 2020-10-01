@@ -64,15 +64,15 @@
   		"previous": "step1"
   	},
   	"step4": {
-  		"question": "When playing games with your friends, do you like to play offence or defence? Or when playing hide-and-go-seek do you like to be the hider or the seeker?",
+  		"question": "When playing games with your friends, do you like to play offense or defense? Or when playing hide-and-go-seek do you like to be the hider or the seeker?",
   		"answers": {
-  			"offence (seeker)": {
-  				"choice": "offence (seeker)",
+  			"offense (seeker)": {
+  				"choice": "offense (seeker)",
   				"points": ["Ethical Hacker","Security Analyst"],
   				"next": "step9"
   			},
-  			"defence (hider)": {
-  				"choice": "defence (hider)",
+  			"defense (hider)": {
+  				"choice": "defense (hider)",
   				"points": ["Security Engineer"],
   				"next": "step10"
   			}
@@ -129,15 +129,15 @@
 
   	},
     "step8": {
-  		"question": "When playing games with your friends, do you like to play offence or defence? Or when playing hide-and-go-seek do you like to be the hider or the seeker?",
+  		"question": "When playing games with your friends, do you like to play offense or defense? Or when playing hide-and-go-seek do you like to be the hider or the seeker?",
   		"answers": {
-  			"offence (seeker)": {
-  				"choice": "offence (seeker)",
+  			"offense (seeker)": {
+  				"choice": "offense (seeker)",
   				"points": ["Security Analyst"],
   				"next": "step9"
   			},
-  			"defence (hider)": {
-  				"choice": "defence (hider)",
+  			"defense (hider)": {
+  				"choice": "defense (hider)",
   				"points": ["Security Administrator"],
   				"next": "step10"
   			}
@@ -206,15 +206,15 @@
   		"previous": null
   	},
     "step14": {
-  		"question": "When playing games with your friends, do you like to play offence or defence? Or when playing hide-and-go-seek do you like to be the hider or the seeker?",
+  		"question": "When playing games with your friends, do you like to play offense or defense? Or when playing hide-and-go-seek do you like to be the hider or the seeker?",
   		"answers": {
-  			"yes": {
-  				"choice": "yes",
+  			"offense (seeker)": {
+  				"choice": "offense (seeker)",
   				"points": ["Security Analyst"],
   				"next": null
   			},
-  			"no": {
-  				"choice": "no",
+  			"defence (hider)": {
+  				"choice": "defence (hider)",
   				"points": ["Securiy Engineer"],
   				"next": null
   			}

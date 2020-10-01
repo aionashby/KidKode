@@ -43,11 +43,11 @@ handlers:
   script: unused
   login: optional
   secure: optional
-- url: /result
+- url: /chooseQuiz
   script: unused
   login: optional
   secure: optional
-- url: /chooseQuiz
+- url: /result
   script: unused
   login: optional
   secure: optional

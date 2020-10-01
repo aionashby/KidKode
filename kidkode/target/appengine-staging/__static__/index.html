@@ -3,14 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <title>KidKode</title>
+        <link rel="icon" href="images/icon.ico" sizes="16x16">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://use.typekit.net/xfb2kyg.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <header>
             <ul class="navbar">
                 <li><a class="active" href="/">Start Quiz</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="contact/">Contact</a></li>
+                <li><a href="about/">About</a></li>
             </ul>
         </header>
     </head>
@@ -19,17 +20,19 @@
         <h2> Find your passion in computer science! </h2> 
         <h3> Tell us what your hobbies and favorite activities are, and we'll show you fields of computer science that you might like! </h3>
         <form class="dropdown" name="branchCode" method="post" action="/chooseQuiz">
-        <label for="branchCode">Which activity interests you the most?</label>
+        <label for="branchCode">Which activity sounds the most interesting?</label>
         <select id="branchCode" name="branchCode" required>
-            <option value="" disabled selected>Choose one to start the quiz!</option>
-            <option value="art">Arts and crafts</option>
-            <option value="problemSolving">Problem solving or puzzles</option>
-            <option value="teaching">Teaching your friends or siblings</option>
-            <option value="websites">Using or discovering new websites</option>
-            <option value="build">Building things</option>
-            <option value="brain">Learning about the human brain</option>
-            <option value="science">Learning about science or doctors</option>
-            <option value="safety">Making forts, protecting people, or making sure people are safe</option>
+            <optgroup>
+                <option value="" disabled selected>Click the arrow to choose one and start the quiz!</option>
+                <option value="art">Arts and crafts</option>
+                <option value="problemSolving">Problem solving or puzzles</option>
+                <option value="teaching">Teaching your friends or siblings</option>
+                <option value="websites">Using or discovering new websites</option>
+                <option value="build">Building things</option>
+                <option value="brain">Learning about the human brain</option>
+                <option value="science">Learning about science or doctors</option>
+                <option value="safety">Making forts, protecting people, or making sure people are safe</option>
+            <optgroup>
         </select>
         <input type="submit" value="Start Quiz!">
         </form>

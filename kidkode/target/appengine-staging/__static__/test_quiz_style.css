@@ -8,7 +8,7 @@ h1 {
   font-weight: 700;
   font-style: normal;
   font-size: 55px;
-  margin: 120px 0px 0px 0px;
+  margin: 60px 0px 0px 0px;
   padding: 10px;
 }
 
@@ -79,7 +79,7 @@ label {
   font-family: proxima-soft, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 23px;
+  font-size: 2.5em;
   padding: 10px;
 }
 
@@ -88,16 +88,16 @@ label {
   font-family: proxima-soft, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 50px;
+  font-size: 3.2em;
   line-height: 1.15em;
   margin: 30px 0px 0px 0px;
   padding: 10px;
 }
 
 .answers {
-  margin-bottom: 20px;
   text-align: left;
   display: inline-block;
+  margin-top: 12vh;
 }
 .answers label {
   margin-bottom: 10px;
@@ -114,7 +114,6 @@ label {
   font-family: proxima-soft, sans-serif;
   font-weight: 700;
   font-style: normal;
-  margin: 25px;
   padding: 16px 32px;
   text-decoration: none;
   position: relative;
@@ -130,6 +129,20 @@ label {
   border-width: 3px;
   position: relative;
   top: 5px;
+}
+
+#next {
+  margin: 6% 3% 3% 15%;
+}
+#previous {
+  margin: 6% 15% 3% 3%;
+}
+#home {
+  background-color: rgb(200, 141, 4);
+  border-color:rgb(158, 110, 0);
+  top: 2vh;
+  left: 2vw;
+  position: fixed;
 }
 
 .slide {
@@ -149,5 +162,30 @@ label {
 
 #quiz-container {
   position: relative;
-  height: 35vh;
+  height: 34vh;
+  margin-top: 11vh;
+  margin-bottom: 3vh;
+  padding: 5%;
+}
+
+@media only screen and (max-width: 1300px) {
+  #next {
+    margin: 6% 3% 3% 15%;
+  }
+
+  #previous {
+    margin: 6% 15% 3% 3%;
+  }
+  .answers {
+    margin-top: 7vh; 
+  }
+  #quiz-container {
+    margin-top: 9vh;
+    margin-bottom: 2vh;
+    height: 28vh;
+   }
+  .answers label {
+    margin: 2vh;
+    font-size: 2em;
+  }
 }

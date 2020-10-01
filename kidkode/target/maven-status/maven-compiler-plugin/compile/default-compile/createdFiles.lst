@@ -1,3 +1,3 @@
 com/google/sps/data/ReadFile.class
-com/google/sps/servlets/DataServlet.class
 com/google/sps/servlets/TestServlet.class
+com/google/sps/servlets/DataServlet.class
